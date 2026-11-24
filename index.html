@@ -1,0 +1,2328 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>工业设计赛事 · 赛季时间轴 | 学生概念赛道</title>
+<meta name="description" content="64 项工业设计赛事（学生概念赛道）按最早征集窗口排列的年度时间轴，含报名费、含金量、评审偏好与官网直达。">
+<style>
+@property --ang { syntax:'<angle>'; inherits:false; initial-value:0deg; }
+
+:root{
+  --bg:#0a0c10;
+  --bg-2:#0e1218;
+  --ink:#f4efe6;
+  --ink-2:#b4aea3;
+  --ink-3:#7f7a72;
+  --line:rgba(255,255,255,.075);
+  --line-2:rgba(255,255,255,.14);
+  --s:#e9c07a;
+  --a:#79d6bd;
+  --b:#8fa8d0;
+  --c:#a89b90;
+  --rail:92px;
+  --maxw:1180px;
+  --ease:cubic-bezier(.22,.68,0,1);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(900px 620px at 10% -8%, rgba(233,192,122,.10), transparent 62%),
+    radial-gradient(820px 700px at 102% 6%, rgba(121,214,189,.07), transparent 58%),
+    radial-gradient(760px 820px at 46% 104%, rgba(143,168,208,.06), transparent 62%),
+    var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","HarmonyOS Sans SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+body::after{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.05;transform:translateZ(0);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1}
+a{color:inherit}
+::selection{background:rgba(233,192,122,.28);color:#fff}
+
+/* ── scrollbar ───────────────────────────── */
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:#080a0e}
+::-webkit-scrollbar-thumb{background:#232830;border-radius:20px;border:2px solid #080a0e}
+::-webkit-scrollbar-thumb:hover{background:#333b46}
+
+/* ── hero ────────────────────────────────── */
+.hero{padding:78px 0 34px;position:relative}
+.kicker{
+  display:flex;align-items:center;gap:12px;
+  font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--ink-3);
+  font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+.kicker i{display:block;width:34px;height:1px;background:linear-gradient(90deg,var(--s),transparent)}
+h1{
+  margin:22px 0 0;
+  font-size:clamp(40px,6.6vw,78px);
+  line-height:.98;font-weight:600;letter-spacing:-.025em;
+}
+h1 em{
+  font-style:normal;
+  background:linear-gradient(96deg,#f7e3bb 8%,var(--s) 42%,#c99a52 72%,#f2d9a8 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.lede{
+  margin:22px 0 0;max-width:660px;color:var(--ink-2);font-size:15px;line-height:1.85;
+}
+.lede b{color:var(--ink);font-weight:600}
+
+/* 此刻可投 */
+.hero-now{
+  position:absolute;right:28px;top:96px;width:286px;
+  padding:16px 16px 10px;border-radius:14px;
+  border:1px solid rgba(64,206,148,.22);
+  background:radial-gradient(120% 90% at 100% 0,rgba(64,206,148,.10),rgba(255,255,255,.02) 60%);
+  backdrop-filter:none;
+}
+.hn-h{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  font-size:10.5px;letter-spacing:.26em;color:#7fe0b6;font-family:ui-monospace,monospace;
+  padding-bottom:10px;margin-bottom:6px;border-bottom:1px solid rgba(64,206,148,.16);
+}
+.hn-h span{color:var(--ink-3);letter-spacing:.08em}
+.hn-item{
+  display:flex;align-items:baseline;gap:8px;padding:6px 0;cursor:pointer;
+  border-bottom:1px dashed rgba(255,255,255,.05);text-align:left;background:none;border-left:0;border-right:0;border-top:0;width:100%;
+  font:inherit;color:var(--ink-2);
+}
+.hn-item:last-child{border-bottom:0}
+.hn-item:hover{color:#fff}
+.hn-item b{font-weight:600;font-size:12.5px;letter-spacing:-.01em;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hn-item i{font-style:normal;font-family:ui-monospace,monospace;font-size:10.5px;color:#7fe0b6;white-space:nowrap}
+.hn-empty{font-size:12px;color:var(--ink-3);padding:8px 0}
+.hn-item u{width:5px;height:5px;border-radius:50%;flex:0 0 auto;margin-right:2px;background:var(--c)}
+.hn-item u[data-tier="S"]{background:var(--s);box-shadow:0 0 6px rgba(233,192,122,.8)}
+.hn-item u[data-tier="A"]{background:var(--a)}
+.hn-item u[data-tier="B"]{background:var(--b)}
+.hn-item u[data-urgent]{background:#ff6f6f;box-shadow:0 0 7px rgba(244,96,96,.9)}
+.hn-item i[data-urgent]{color:#ff9d9d}
+
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.stat{
+  display:flex;align-items:baseline;gap:8px;
+  padding:10px 16px;border:1px solid var(--line);border-radius:999px;
+  background:rgba(255,255,255,.022);
+  transition:border-color .4s var(--ease),background .4s var(--ease);
+}
+.stat:hover{border-color:var(--line-2);background:rgba(255,255,255,.045)}
+.stat b{font-size:17px;font-weight:600;font-family:ui-monospace,Menlo,monospace;letter-spacing:-.02em}
+.stat span{font-size:12px;color:var(--ink-3);letter-spacing:.04em}
+.stat.gold b{color:var(--s)}
+.stat.live b{color:#7fe0b6}
+.stat.live{border-color:rgba(64,206,148,.32);background:rgba(64,206,148,.07)}
+
+.legend{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;
+  margin-top:26px;padding-top:22px;border-top:1px solid var(--line);
+  font-size:12px;color:var(--ink-3);
+}
+.legend .lg{display:inline-flex;align-items:center;gap:7px}
+.legend .sw{width:9px;height:9px;border-radius:3px;display:inline-block}
+.legend .sw.s{background:var(--s);box-shadow:0 0 12px rgba(233,192,122,.7)}
+.legend .sw.a{background:var(--a)}
+.legend .sw.b{background:var(--b)}
+.legend .sw.c{background:var(--c)}
+.legend .note{color:var(--ink-3);opacity:.75}
+
+/* ── season wall (gantt) ─────────────────── */
+.panel{
+  border:1px solid var(--line);border-radius:20px;
+  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
+  position:relative;overflow:hidden;
+}
+.panel::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(1100px 240px at 20% -20%,rgba(233,192,122,.07),transparent 70%);
+}
+.panel-head{
+  display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  padding:22px 26px 16px;border-bottom:1px solid var(--line);position:relative;
+}
+.panel-head h2{
+  margin:0;font-size:14px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);
+}
+.panel-head p{margin:0;font-size:12px;color:var(--ink-3);letter-spacing:.02em}
+.wall{padding:16px 12px 14px;overflow-x:auto}
+
+.wall-toggle{
+  width:100%;display:flex;align-items:center;gap:10px;padding:13px 18px;
+  background:transparent;border:0;border-bottom:1px solid var(--line);
+  color:var(--ink);font-family:inherit;font-size:13px;letter-spacing:.02em;cursor:pointer;text-align:left;
+}
+.wall-toggle .wt-ico{display:inline-block;font-size:11px;color:var(--ink-3);transition:transform .3s var(--ease)}
+.wall-toggle .wt-t{font-weight:600}
+.wall-toggle .wt-sub{font-size:11.5px;color:var(--ink-3);letter-spacing:.02em}
+.wall-toggle .wt-hint{margin-left:auto;font-size:11.5px;color:var(--ink-3);letter-spacing:.02em}
+.wall-toggle:hover .wt-hint{color:var(--ink-2)}
+.wall-body{display:none}
+.wall.expanded .wall-body{display:block}
+.wall.expanded .wall-toggle .wt-ico{transform:rotate(180deg)}
+.wall-grid{display:grid;grid-template-columns:repeat(12,minmax(88px,1fr));gap:0;min-width:1056px}
+.col{padding:0 7px;position:relative}
+.col + .col{border-left:1px dashed rgba(255,255,255,.055)}
+.col-head{
+  display:flex;align-items:baseline;justify-content:space-between;
+  padding:0 2px 10px;margin-bottom:8px;border-bottom:1px solid var(--line);
+}
+.col-head b{
+  font-family:ui-monospace,Menlo,monospace;font-size:15px;font-weight:600;color:var(--ink-2);letter-spacing:-.02em;
+}
+.col-head span{font-size:10.5px;color:var(--ink-3);letter-spacing:.06em}
+.col-head .now{
+  font-size:9px;color:#0a0c10;background:var(--s);border-radius:3px;padding:1px 4px;
+  letter-spacing:.06em;font-weight:700;
+}
+.col-body{display:flex;flex-direction:column;gap:4px;min-height:34px}
+.gchip{
+  display:flex;align-items:center;gap:5px;
+  padding:4px 6px;border-radius:6px;border:1px solid transparent;
+  background:rgba(255,255,255,.045);
+  font-size:10.5px;line-height:1.35;color:var(--ink-2);cursor:pointer;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  transition:background .25s,border-color .25s,transform .25s,color .25s;
+  text-align:left;
+}
+.gchip .gd{width:5px;height:5px;border-radius:50%;flex:0 0 auto;background:var(--c)}
+.gchip[data-tier="S"]{background:rgba(233,192,122,.10);color:#f0d5a4}
+.gchip[data-tier="S"] .gd{background:var(--s);box-shadow:0 0 6px var(--s)}
+.gchip[data-tier="A"] .gd{background:var(--a)}
+.gchip[data-tier="B"] .gd{background:var(--b)}
+.gchip[data-tier="C"] .gd{background:var(--c)}
+.gchip:hover{background:rgba(255,255,255,.12);border-color:var(--line-2);color:#fff;transform:translateX(2px)}
+.gchip.cont{opacity:.42;border-style:dashed;border-color:rgba(255,255,255,.10);background:transparent}
+.gchip.cont::after{content:'»';font-size:9px;opacity:.7;margin-left:auto}
+.gchip.is-off{opacity:.12;pointer-events:none}
+
+/* ── controls ────────────────────────────── */
+.controls{
+  position:sticky;top:0;z-index:40;margin:34px 0 8px;padding:12px 0;
+  background:linear-gradient(180deg,rgba(10,12,16,.985) 45%,rgba(10,12,16,.93) 78%,rgba(10,12,16,.62));
+  backdrop-filter:none;
+}
+.ctrl-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.search{
+  position:relative;flex:1 1 240px;max-width:320px;
+}
+.search input{
+  width:100%;padding:10px 14px 10px 36px;border-radius:10px;
+  border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--ink);
+  font-size:13px;font-family:inherit;outline:none;transition:border-color .3s,background .3s;
+}
+.search input::placeholder{color:var(--ink-3)}
+.search input:focus{border-color:rgba(233,192,122,.5);background:rgba(255,255,255,.055)}
+.search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:14px;height:14px;opacity:.5}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.fchip{
+  padding:6px 11px;border-radius:999px;border:1px solid var(--line);
+  background:transparent;color:var(--ink-2);font-size:11.5px;font-family:inherit;cursor:pointer;
+  transition:all .3s var(--ease);letter-spacing:.01em;
+}
+.fchip:hover{border-color:var(--line-2);color:var(--ink)}
+.fchip[aria-pressed="true"]{
+  background:var(--ink);color:#0a0c10;border-color:var(--ink);font-weight:600;
+}
+.fchip .n{opacity:.55;font-size:10.5px;margin-left:4px;font-family:ui-monospace,monospace}
+.hint{margin-left:auto;font-size:11px;color:var(--ink-3);font-family:ui-monospace,monospace;letter-spacing:.04em}
+
+/* ── timeline ────────────────────────────── */
+.tl{position:relative;padding:8px 0 40px}
+.tl::before{
+  content:'';position:absolute;left:var(--rail);top:0;bottom:60px;width:1px;
+  background:linear-gradient(180deg,transparent,rgba(255,255,255,.13) 4%,rgba(255,255,255,.10) 92%,transparent);
+}
+.rail-fill{
+  position:absolute;left:calc(var(--rail) - .5px);top:0;width:2px;height:0;
+  background:linear-gradient(180deg,
+    #f0cd93 0%, #e9c07a 16%, #9fd9c4 40%, #79d6bd 52%, #8fa8d0 74%, #a99adf 92%, #b9a6ef 100%);
+  background-size:100% var(--tl-h, 6000px);
+  background-repeat:no-repeat;
+  box-shadow:0 0 16px rgba(233,192,122,.30);
+  border-radius:2px;
+}
+.rail-fill::after{
+  content:';position:absolute;left:-3px;bottom:-4px;width:8px;height:8px;border-radius:50%;
+  background:#fffaf0;box-shadow:0 0 14px rgba(255,250,240,.85),0 0 26px rgba(233,192,122,.45);
+}
+
+.month-block{position:relative;padding-top:6px}
+.month-head{
+  position:sticky;top:62px;z-index:30;
+  display:flex;align-items:center;gap:16px;
+  padding:9px 0 9px;
+  background:linear-gradient(180deg,rgba(10,12,16,.97) 42%,rgba(10,12,16,.82) 78%,rgba(10,12,16,.5));
+  margin-left:calc(var(--rail) - 56px);
+}
+.mnum{
+  font-family:Georgia,"Songti SC",serif;
+  font-size:34px;line-height:1;font-weight:600;letter-spacing:-.03em;
+  color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.30);
+  min-width:56px;
+}
+.month-block.is-active .mnum{-webkit-text-stroke:1px rgba(233,192,122,.75)}
+.mname{font-size:13px;letter-spacing:.28em;color:var(--ink-2);text-transform:uppercase}
+.mcount{
+  font-size:10.5px;font-family:ui-monospace,monospace;color:var(--ink-3);
+  padding:2px 7px;border:1px solid var(--line);border-radius:999px;letter-spacing:.06em;
+}
+.mline{flex:1;height:1px;background:linear-gradient(90deg,rgba(255,255,255,.13),transparent)}
+
+.ev{
+  position:relative;
+  padding:9px 0 9px calc(var(--rail) + 26px);
+  opacity:0;transform:translateY(16px);
+  transition:opacity .7s var(--ease),transform .7s var(--ease);
+}
+.ev.in{opacity:1;transform:none}
+.ev.is-hidden{display:none}
+.ev:hover,.ev:focus-within,.ev.open{position:relative;z-index:60}
+.ev:hover .ev-card,.ev:focus-within .ev-card{position:relative;z-index:61}
+
+.node{
+  position:absolute;left:calc(var(--rail) - 6px);top:38px;
+  width:13px;height:13px;border-radius:50%;
+  background:var(--bg);border:1.5px solid rgba(255,255,255,.28);
+  transition:transform .35s var(--ease),border-color .35s,box-shadow .35s;z-index:2;
+}
+.node::after{
+  content:'';position:absolute;inset:3px;border-radius:50%;background:rgba(255,255,255,.35);
+  transition:background .4s;
+}
+.ev[data-tier="S"] .node{width:17px;height:17px;left:calc(var(--rail) - 8px);border-color:var(--s)}
+.ev[data-tier="S"] .node::after{background:var(--s);box-shadow:0 0 10px var(--s)}
+/* 每级单色：节点 / 涟漪 / live 边框统一取 --tc */
+.ev[data-tier="S"]{--tc:233,192,122}
+.ev[data-tier="A"]{--tc:121,214,189}
+.ev[data-tier="B"]{--tc:143,168,208}
+.ev[data-tier="C"]{--tc:141,151,166}
+.ev[data-tier="A"] .node{border-color:var(--a)}
+.ev[data-tier="A"] .node::after{background:var(--a)}
+.ev[data-tier="B"] .node{border-color:rgba(143,168,208,.55)}
+.ev[data-tier="B"] .node::after{background:rgba(143,168,208,.7)}
+.ev[data-tier="C"] .node{border-color:rgba(141,151,166,.42)}
+.ev[data-tier="C"] .node::after{background:rgba(141,151,166,.55)}
+.ev:hover .node{transform:scale(1.28)}
+
+/* ── 涟漪：只有「正在征集」才有，颜色跟随含金量 ── */
+.ev[data-st="live"].in .node{
+  border-color:rgba(var(--tc),.95);
+  box-shadow:0 0 18px rgba(var(--tc),.5),0 0 0 1px rgba(var(--tc),.28);
+  animation:nodeBreathe 2.8s ease-out infinite;
+}
+.ev[data-st="live"] .node::after{background:rgba(var(--tc),1);box-shadow:0 0 12px rgba(var(--tc),.9)}
+.ev[data-st="live"].in .node::before{
+  content:'';position:absolute;inset:-3px;border-radius:50%;
+  border:1.5px solid rgba(var(--tc),.92);
+  animation:ripple 2.8s cubic-bezier(.22,.68,.28,1) infinite;
+  will-change:transform,opacity;
+}
+.ev[data-st="live"].in::after{
+  content:'';position:absolute;left:calc(var(--rail) - 6px);top:38px;
+  width:13px;height:13px;border-radius:50%;pointer-events:none;
+  border:1.5px solid rgba(var(--tc),.55);
+  animation:ripple 2.8s cubic-bezier(.22,.68,.28,1) 1.4s infinite;
+  will-change:transform,opacity;
+}
+.ev[data-st="live"][data-tier="S"]::after{left:calc(var(--rail) - 8px);width:17px;height:17px}
+.ev[data-st="live"][data-tier="B"]::after{left:calc(var(--rail) - 5px);width:11px;height:11px}
+.ev[data-st="live"][data-tier="C"]::after{left:calc(var(--rail) - 4px);width:9px;height:9px}
+.ev[data-st="live"][data-tier="S"] .node::before{inset:-4px}
+
+/* ── 紧急：剩余 < 30 天 → 红色涟漪 + 加速 ── */
+.ev[data-urgent]{--tc:244,96,96}
+.ev[data-urgent] .node{animation-duration:1.7s}
+.ev[data-urgent] .node::before{inset:-4px;border-width:2px;animation-duration:1.7s}
+.ev[data-urgent]::after{animation-duration:1.7s;animation-delay:.85s;border-width:2px}
+.ev[data-urgent] .ev-card{border-color:rgba(244,96,96,.34)}
+.ev[data-urgent] .ev-card::before{background:linear-gradient(180deg,#ff8f8f,#e2504f);opacity:.85;box-shadow:0 0 14px rgba(244,96,96,.55)}
+.ev[data-urgent] .st-cycle{color:#cdbde8;background:rgba(169,154,223,.10);border-color:rgba(169,154,223,.30)}
+.st-cycle i{background:#b9a6ef;box-shadow:none}
+.ev[data-st="cycle"] .ev-card{border-color:rgba(169,154,223,.18)}
+.ev[data-st="cycle"] .ev-card::before{background:linear-gradient(180deg,#b9a6ef,#8f7fd0);opacity:.35}
+.ev[data-st="cycle"] .emblem img{opacity:.88}
+.st-live{color:#ff9d9d;background:rgba(244,96,96,.13);border-color:rgba(244,96,96,.42)}
+.ev[data-urgent] .st-live i{background:#ff9d9d;box-shadow:0 0 0 0 rgba(255,157,157,.8);animation:beat 1.3s ease-out infinite}
+
+@keyframes ripple{
+  0%{transform:scale(.55);opacity:.95}
+  62%{transform:scale(3.1);opacity:.12}
+  100%{transform:scale(3.1);opacity:0}
+}
+@keyframes nodeBreathe{
+  0%{box-shadow:0 0 14px rgba(var(--tc),.32),0 0 0 0 rgba(var(--tc),.5)}
+  70%{box-shadow:0 0 26px rgba(var(--tc),.68),0 0 0 12px rgba(var(--tc),0)}
+  100%{box-shadow:0 0 14px rgba(var(--tc),.32),0 0 0 0 rgba(var(--tc),0)}
+}
+@keyframes pulse{0%{transform:scale(.85);opacity:.9}70%{transform:scale(1.55);opacity:0}100%{opacity:0}}
+
+.ev-card{
+  position:relative;display:grid;grid-template-columns:58px 1fr auto;align-items:center;
+  gap:18px;padding:16px 20px;border-radius:16px;
+  border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.038),rgba(255,255,255,.012));
+  text-decoration:none;color:inherit;cursor:pointer;
+  transition:transform .45s var(--ease),border-color .45s,background .45s,box-shadow .45s;
+  overflow:hidden;contain:layout paint;
+}
+.ev-card:hover,.ev-card:focus-visible{
+  transform:translateX(5px);
+  border-color:var(--line-2);
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+  box-shadow:0 20px 46px -22px rgba(0,0,0,.9);
+  outline:none;
+}
+.ev[data-tier="S"] .ev-card{border-color:rgba(233,192,122,.24);background:linear-gradient(180deg,rgba(233,192,122,.075),rgba(255,255,255,.012))}
+.ev[data-tier="S"] .ev-card:hover{border-color:rgba(233,192,122,.55);box-shadow:0 22px 54px -24px rgba(233,192,122,.35)}
+.ev[data-tier="S"] .ev-card::after{
+  content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;
+  background:conic-gradient(from var(--ang),transparent 0 62%,rgba(246,220,170,.9) 74%,transparent 86%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  opacity:.5;
+}
+.ev[data-tier="S"] .ev-card:hover::after{animation:spin2 7s linear infinite}
+@keyframes spin2{to{transform:rotate(360deg)}}
+
+.emblem{
+  width:58px;height:58px;border-radius:16px;display:grid;place-items:center;flex:0 0 auto;
+  background:linear-gradient(160deg,#191e25,#070a0d 78%);
+  box-shadow:0 10px 24px -12px rgba(0,0,0,.95),0 0 0 1px rgba(255,255,255,.085) inset,0 1px 0 rgba(255,255,255,.05) inset;
+  position:relative;overflow:hidden;
+  transition:transform .45s var(--ease),box-shadow .45s;
+}
+.emblem img{width:40px;height:40px;object-fit:contain;display:block}
+.ev-card:hover .emblem img{filter:drop-shadow(0 1px 2px rgba(0,0,0,.55))}
+.emblem .mono{
+  display:none;font-family:Georgia,"Songti SC","Noto Serif SC",serif;font-weight:600;
+  font-size:19px;line-height:1;color:#efe6d5;letter-spacing:-.01em;
+}
+.emblem .mono.on{display:block}
+.emblem .mono.long{font-size:15px;letter-spacing:-.02em}
+.emblem .mono.xs{font-size:13px;letter-spacing:.01em}
+.ev[data-tier="S"] .emblem{
+  background:radial-gradient(120% 120% at 30% 0%,#2a2418,#0a0c0f 70%);
+  box-shadow:0 10px 26px -12px rgba(0,0,0,.95),0 0 0 1px rgba(233,192,122,.62) inset,0 0 26px -8px rgba(233,192,122,.55),0 1px 0 rgba(255,255,255,.06) inset;
+}
+.ev[data-tier="A"] .emblem{box-shadow:0 10px 24px -12px rgba(0,0,0,.95),0 0 0 1px rgba(121,214,189,.34) inset,0 0 18px -10px rgba(121,214,189,.5)}
+.ev[data-tier="B"] .emblem{box-shadow:0 10px 24px -12px rgba(0,0,0,.95),0 0 0 1px rgba(143,168,208,.14) inset}
+/* 华灿奖：官网同款品红底（#ff1cab）+ 原标识直接压上 */
+#ev-huacan .emblem,
+#ev-huacan .d-tag{
+  background:#ff1cab;
+  box-shadow:0 10px 26px -12px rgba(255,28,171,.55),0 0 0 1px rgba(255,255,255,.16) inset;
+}
+#ev-huacan .emblem img,
+#ev-huacan .d-tag img{filter:none}
+.ev-card:hover .emblem{transform:scale(1.07) rotate(-2.5deg)}
+
+.ev-main{min-width:0}
+.ev-name{
+  display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+  font-size:17px;font-weight:600;letter-spacing:-.01em;line-height:1.35;
+}
+.ev-name .en{
+  font-size:10.5px;font-family:ui-monospace,monospace;color:var(--ink-3);
+  letter-spacing:.1em;text-transform:uppercase;font-weight:400;
+}
+.statusnote{margin:0 0 12px;font-size:11.5px;line-height:1.7;color:var(--ink-3)}
+.sbar{
+  display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+  margin:0 0 20px;padding:9px 14px;border-radius:11px;
+  font-size:11.5px;line-height:1.6;border:1px solid var(--line-2);
+  background:rgba(255,255,255,.022);color:var(--ink-2);
+}
+.sbar b{font-weight:600;color:var(--ink)}
+.sbar.old{border-color:rgba(233,192,122,.30);background:rgba(233,192,122,.055);color:rgba(247,223,174,.92)}
+.sbar.bad{border-color:rgba(244,96,96,.34);background:rgba(244,96,96,.07);color:#ffb3ab}
+.sbar .dot{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.75;flex:0 0 auto}
+.chk{
+  display:inline-flex;align-items:center;gap:3px;font-size:10px;letter-spacing:.02em;
+  padding:1px 6px;border-radius:999px;border:1px solid transparent;white-space:nowrap;
+}
+.chk.good{color:rgba(121,214,189,.72);border-color:rgba(121,214,189,.22)}
+.chk.warn{color:#f7dfae;border-color:rgba(233,192,122,.42);background:rgba(233,192,122,.10)}
+.chk.bad{color:#ff9b8f;border-color:rgba(255,120,110,.42);background:rgba(255,120,110,.09)}
+.chk.mute{color:rgba(214,220,229,.42);border-color:rgba(255,255,255,.10)}
+.pill{
+  font-size:10px;padding:2px 7px;border-radius:5px;letter-spacing:.04em;
+  border:1px solid var(--line-2);color:var(--ink-2);white-space:nowrap;
+}
+.pill.gold{border-color:rgba(233,192,122,.45);color:var(--s);background:rgba(233,192,122,.08)}
+.pill.alert{border-color:rgba(255,120,110,.4);color:#ff9b8f;background:rgba(255,120,110,.07)}
+.ev-sub{
+  margin-top:5px;font-size:12px;color:var(--ink-3);display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+}
+.ev-sub i{font-style:normal;opacity:.45}
+.ev-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.tchip{
+  font-size:10.5px;padding:3px 8px;border-radius:5px;
+  background:rgba(255,255,255,.045);color:var(--ink-2);letter-spacing:.02em;
+  border:1px solid rgba(255,255,255,.05);white-space:nowrap;
+}
+.tchip.pref{max-width:230px;overflow:hidden;text-overflow:ellipsis}
+
+/* 报名费：卡内第一优先级 */
+.tchip.cost{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:11.5px;font-weight:600;letter-spacing:.01em;padding:3.5px 9px;
+  border-radius:6px;
+}
+.tchip.cost i{width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.55;flex:0 0 auto}
+.tchip.cost.paid{
+  color:#f7dfae;background:linear-gradient(180deg,rgba(233,192,122,.16),rgba(233,192,122,.07));
+  border-color:rgba(233,192,122,.38);box-shadow:0 0 0 1px rgba(233,192,122,.06) inset;
+}
+.tchip.cost.free{
+  color:#a5f0cb;background:linear-gradient(180deg,rgba(64,206,148,.14),rgba(64,206,148,.05));
+  border-color:rgba(64,206,148,.34);
+}
+/* 其它小项压低对比 */
+.tchip:not(.cost){color:rgba(214,220,229,.62);background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.04)}
+.tchip.pref{color:rgba(214,220,229,.52)}
+.tchip.proto{color:rgba(232,201,160,.66)}
+
+.ev-side{text-align:right;flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-end;gap:6px;max-width:248px}
+.ev-date{
+  font-family:ui-monospace,Menlo,monospace;font-size:13.5px;letter-spacing:-.02em;color:var(--ink);
+  white-space:normal;overflow-wrap:anywhere;line-height:1.35;
+}
+.st{
+  display:inline-flex;align-items:center;gap:6px;font-size:10.5px;letter-spacing:.04em;
+  padding:2.5px 8px 2.5px 7px;border-radius:999px;border:1px solid transparent;white-space:nowrap;
+  font-family:ui-monospace,Menlo,monospace;
+}
+.st i{width:5px;height:5px;border-radius:50%;background:currentColor;flex:0 0 auto}
+.st-live{color:#7fe0b6;background:rgba(64,206,148,.10);border-color:rgba(64,206,148,.30)}
+.st-live i{box-shadow:0 0 0 0 rgba(127,224,182,.7);animation:beat 2.4s ease-out infinite}
+@keyframes beat{0%{box-shadow:0 0 0 0 rgba(127,224,182,.55)}70%{box-shadow:0 0 0 6px rgba(127,224,182,0)}100%{box-shadow:0 0 0 0 rgba(127,224,182,0)}}
+.st-soon{color:#e8c995;background:rgba(233,192,122,.07);border-color:rgba(233,192,122,.22)}
+.st-past{color:#6d7583;background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.07)}
+.st-roll{color:#9db3d8;background:rgba(143,168,208,.08);border-color:rgba(143,168,208,.22)}
+/* 左侧竖条 = 含金量（永久标记）；状态另由徽章 + 边框表达 */
+.ev .ev-card::before{
+  content:'';position:absolute;left:0;top:14px;bottom:14px;width:2px;border-radius:2px;
+  background:var(--b);opacity:.42;
+}
+.ev[data-tier="A"] .ev-card::before{background:var(--a);opacity:.55}
+.ev[data-tier="S"] .ev-card::before{
+  background:linear-gradient(180deg,transparent,var(--s) 22%,var(--s) 78%,transparent);
+  opacity:1;box-shadow:0 0 12px rgba(233,192,122,.5);
+}
+.ev[data-tier="C"] .ev-card::before{background:#8d97a6;opacity:.13}
+/* 状态：正在征集 = 绿色边框；S 级仍保留金边（金不换） */
+.ev[data-st="live"] .ev-card{border-color:rgba(var(--tc),.30)}
+.ev[data-tier="S"][data-st="live"] .ev-card{border-color:rgba(var(--tc),.46)}
+.ev[data-st="past"] .ev-card{border-color:rgba(255,255,255,.055)}
+/* 含金量「中及以下」：存在感再压一档 */
+.ev[data-tier="B"] .ev-card{border-color:rgba(255,255,255,.05)}
+.ev[data-tier="C"] .ev-card{border-color:rgba(255,255,255,.038)}
+.ev[data-tier="C"] .ev-name{color:var(--ink-2)}
+.ev[data-tier="C"] .emblem{box-shadow:0 10px 24px -12px rgba(0,0,0,.95),0 0 0 1px rgba(255,255,255,.05) inset}
+.ev[data-tier="C"] .emblem img{opacity:.86}
+.ev[data-tier="B"] .node{width:11px;height:11px;left:calc(var(--rail) - 5px)}
+.ev[data-tier="C"] .node{width:9px;height:9px;left:calc(var(--rail) - 4px)}
+.ev[data-tier="C"] .meter-track{background:rgba(255,255,255,.07)}
+.ev[data-tier="S"][data-st="past"] .ev-card{border-color:rgba(233,192,122,.16)}
+.ev[data-st="past"] .emblem img{opacity:.78}
+
+.ev-date span{color:var(--ink-3);font-size:11px}
+.meter{display:flex;align-items:center;gap:8px}
+.meter-track{width:58px;height:5px;border-radius:3px;background:rgba(255,255,255,.10);overflow:hidden;position:relative}
+.meter-track::after{
+  content:'';position:absolute;inset:0;border-radius:3px;
+  background:repeating-linear-gradient(90deg,transparent 0 13px,rgba(10,12,16,.85) 13px 14.5px);
+}
+.meter-fill{display:block;height:100%;border-radius:3px;background:var(--c)}
+.ev[data-tier="S"] .meter-fill{background:linear-gradient(90deg,#c99a52,var(--s));box-shadow:0 0 10px rgba(233,192,122,.85)}
+.ev[data-tier="A"] .meter-fill{background:var(--a)}
+.ev[data-tier="B"] .meter-fill{background:var(--b);opacity:.72}
+.ev[data-tier="C"] .meter-fill{background:#7d8593;opacity:.5}
+.meter-label{font-size:9.5px;color:var(--ink-3);letter-spacing:.08em}
+.linkhint{color:#ffcf8a;border-color:rgba(255,207,138,.32);background:rgba(255,207,138,.10)}
+.basis{
+  font-size:9.5px;letter-spacing:.06em;padding:1.5px 0;border-radius:4px;
+  color:var(--ink-3);white-space:nowrap;display:inline-flex;align-items:center;gap:5px;
+}
+.basis::before{content:'';width:4px;height:4px;border-radius:1px;background:currentColor;opacity:.7}
+.basis[data-b="官方"]{color:#7fbfae}
+.basis[data-b="阶段时间"]{color:#c9a877}
+.basis[data-b="待公告"]{color:#a58b8b}
+
+/* ── hover detail sheet ──────────────────── */
+.ev-detail{
+  position:absolute;z-index:41;left:calc(var(--rail) + 26px);right:0;
+  top:calc(100% - 6px);
+  padding:18px 20px 16px;border-radius:16px;
+  border:1px solid rgba(255,255,255,.16);
+  background:linear-gradient(180deg,#181c24,#0e1116);
+  box-shadow:0 34px 70px -26px rgba(0,0,0,.95),inset 0 1px 0 rgba(255,255,255,.07);
+  opacity:0;visibility:hidden;transform:translateY(-8px) scale(.995);
+  transition:opacity .3s var(--ease),transform .3s var(--ease),visibility .3s;
+  pointer-events:none;
+  max-height:min(76vh,660px);overflow:auto;overscroll-behavior:contain;
+  scrollbar-width:thin;
+}
+.ev-detail::before{content:'';position:absolute;left:0;right:0;top:-12px;height:13px}
+.ev:hover .ev-detail,.ev:focus-within .ev-detail,.ev.open .ev-detail{
+  opacity:1;visibility:visible;transform:none;pointer-events:auto;
+}
+.ev[data-flip="up"] .ev-detail{top:auto;bottom:calc(100% - 6px);transform:translateY(8px) scale(.995)}
+.ev[data-flip="up"]:hover .ev-detail,.ev[data-flip="up"]:focus-within .ev-detail{transform:none}
+
+.pill.cyc{
+  color:#cdbde8;border-color:rgba(169,154,223,.42);background:rgba(169,154,223,.12);
+}
+/* 二维码弹窗 */
+.qr-mask{
+  position:fixed;inset:0;z-index:120;display:none;place-items:center;
+  background:rgba(4,6,9,.78);backdrop-filter:blur(6px);
+}
+.qr-mask.on{display:grid;animation:qrin .25s ease-out}
+@keyframes qrin{from{opacity:0}to{opacity:1}}
+.qr-box{
+  width:min(88vw,340px);padding:20px;border-radius:18px;text-align:center;
+  background:linear-gradient(180deg,#14181f,#0b0e13);
+  border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 80px -30px #000;
+}
+.qr-box b{display:block;font-size:13.5px;letter-spacing:-.01em;margin-bottom:4px}
+.qr-box span{display:block;font-size:11px;color:var(--ink-3);margin-bottom:14px;line-height:1.7}
+.qr-box img{width:100%;max-width:250px;border-radius:12px;background:#fff;padding:8px;image-rendering:pixelated}
+.qr-box em{display:block;margin-top:12px;font-style:normal;font-size:11px;color:var(--ink-3)}
+/* 轻提示 */
+.toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,14px);z-index:130;
+  max-width:min(90vw,560px);padding:12px 16px;border-radius:12px;
+  font-size:12.5px;line-height:1.7;color:#ffe9d6;
+  background:linear-gradient(180deg,rgba(60,36,20,.96),rgba(34,22,14,.96));
+  border:1px solid rgba(233,192,122,.42);box-shadow:0 20px 50px -24px #000;
+  opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;
+}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.d-banned{
+  display:flex;align-items:flex-start;gap:9px;margin:0 0 13px;padding:11px 13px;border-radius:10px;
+  background:linear-gradient(180deg,rgba(244,96,96,.16),rgba(244,96,96,.07));
+  border:1px solid rgba(244,96,96,.42);
+  box-shadow:0 0 0 1px rgba(244,96,96,.08) inset,0 8px 22px -16px rgba(244,96,96,.8);
+}
+.d-banned b{
+  flex:0 0 auto;font-size:11px;font-weight:700;letter-spacing:.02em;color:#ff9d9d;
+  display:inline-flex;align-items:center;gap:5px;padding:2px 8px;border-radius:5px;
+  background:rgba(244,96,96,.18);border:1px solid rgba(244,96,96,.34);
+}
+.d-banned span{font-size:11.5px;line-height:1.7;color:#ffd7d7}
+.d-head{display:flex;align-items:flex-start;gap:12px;padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid var(--line)}
+.d-tag{
+  flex:0 0 auto;width:44px;height:44px;border-radius:11px;display:grid;place-items:center;
+  background:linear-gradient(160deg,#191e25,#070a0d 78%);
+  box-shadow:0 6px 16px -8px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.09) inset;
+  font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.04em;color:#4a4438;
+  overflow:hidden;
+}
+.d-tag img{width:32px;height:32px;object-fit:contain}
+.d-tag .mono{display:none}
+.d-tag .mono.on{display:block}
+.d-tag .mono.long{font-size:13px}
+.d-tag .mono.xs{font-size:10.5px}
+.d-titles{flex:1;min-width:0}
+.d-titles b{display:block;font-size:14px;font-weight:600;letter-spacing:-.01em}
+.d-titles span{display:block;margin-top:3px;font-size:11px;color:var(--ink-3);line-height:1.6}
+.d-go{
+  flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;
+  padding:6px 11px;border-radius:8px;border:1px solid rgba(233,192,122,.4);
+  background:rgba(233,192,122,.1);color:var(--s);font-size:11px;text-decoration:none;
+  transition:background .3s,transform .3s;white-space:nowrap;
+}
+.d-go:hover{background:rgba(233,192,122,.2);transform:translateY(-1px)}
+.d-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px}
+.d-item{min-width:0}
+.d-item.wide{grid-column:1/-1}
+.d-k{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;font-family:ui-monospace,monospace}
+.d-v{font-size:12px;line-height:1.7;color:var(--ink-2);word-break:break-word}
+.d-v.cost{color:#f0d5a4}
+.d-v em{font-style:normal;color:#ffab9e}
+.d-foot{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.d-foot .k{font-size:9.5px;letter-spacing:.14em;color:var(--ink-3);font-family:ui-monospace,monospace}
+
+.ev-info{
+  display:none;position:absolute;right:14px;bottom:10px;z-index:3;
+  width:26px;height:26px;border-radius:50%;border:1px solid var(--line-2);
+  background:rgba(0,0,0,.4);color:var(--ink-2);font-size:12px;font-family:inherit;
+  cursor:pointer;
+}
+
+/* ── rolling section ─────────────────────── */
+.rolling{margin-top:26px}
+.rolling .month-head{position:static;background:none;backdrop-filter:none;margin-left:calc(var(--rail) - 56px)}
+.roll-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:14px;padding-left:var(--rail)}
+.roll-grid .ev{padding:0}
+.roll-grid .ev:not(.in){opacity:0;transform:translateY(16px)}
+.roll-grid .node{display:none}
+.roll-note{
+  padding-left:var(--rail);margin:-2px 0 15px;max-width:840px;
+  font-size:12px;line-height:1.75;color:var(--ink-3);
+}
+.roll-note strong{color:var(--ink-2);font-weight:600}
+.roll-grid .ev .ev-detail{left:0}
+.roll-grid .ev-card{grid-template-columns:58px 1fr}
+.roll-grid .ev-side{
+  grid-column:1/-1;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;
+  text-align:left;max-width:none;gap:7px 12px;margin-top:6px;padding-top:11px;border-top:1px dashed var(--line);
+}
+.roll-grid .ev-date{flex:0 0 100%;font-size:12.5px;color:var(--ink-2)}
+
+/* ── footnote ────────────────────────────── */
+.foot{
+  margin:50px 0 26px;padding-top:26px;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:1.2fr 1fr;gap:34px;font-size:12px;line-height:1.9;color:var(--ink-3);
+}
+.foot h3{margin:0 0 10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2)}
+.foot b{color:var(--ink-2);font-weight:600}
+.foot .dead{color:#8d7f79}
+
+
+/* ── 更多赛事来源 ─────────────────────────── */
+.more-src{margin:26px 0 0;padding:24px 0 86px;border-top:1px solid var(--line)}
+.more-src h3{margin:0 0 12px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2)}
+.src-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.srclink{
+  display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;
+  border:1px solid var(--line);background:rgba(255,255,255,.022);
+  text-decoration:none;color:var(--ink-2);transition:all .3s var(--ease);
+}
+.srclink:hover{border-color:rgba(233,192,122,.34);background:rgba(233,192,122,.06);transform:translateY(-2px)}
+.srclink .s-badge{
+  flex:0 0 auto;width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
+  font-size:12px;font-weight:700;letter-spacing:.02em;color:var(--s);
+  background:linear-gradient(160deg,rgba(233,192,122,.18),rgba(233,192,122,.05));
+  border:1px solid rgba(233,192,122,.26);
+}
+.srclink .s-txt{min-width:0}
+.srclink b{display:block;font-size:13px;font-weight:600;color:var(--ink);letter-spacing:-.01em;margin-bottom:2px}
+.srclink span{display:block;font-size:11.5px;color:var(--ink-3);line-height:1.6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.srclink .s-go{margin-left:auto;font-size:11px;color:var(--ink-3);flex:0 0 auto}
+.srclink:hover .s-go{color:var(--s)}
+
+/* ── side month nav ──────────────────────── */
+.mnav{
+  position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:45;
+  display:flex;flex-direction:column;gap:2px;align-items:flex-end;
+}
+.mnav button{
+  display:flex;align-items:center;gap:8px;background:none;border:0;cursor:pointer;
+  padding:3px 0;font-family:ui-monospace,monospace;font-size:9.5px;color:rgba(255,255,255,.26);
+  transition:color .3s;
+}
+.mnav button i{width:14px;height:1px;background:rgba(255,255,255,.22);transition:width .3s,background .3s}
+.mnav button:hover{color:var(--ink-2)}
+.mnav button:hover i{width:22px;background:var(--ink-2)}
+.mnav button.on{color:var(--s)}
+.mnav button.on i{width:26px;background:var(--s);box-shadow:0 0 8px rgba(233,192,122,.7)}
+
+.totop{
+  position:fixed;left:22px;bottom:22px;z-index:45;
+  width:38px;height:38px;border-radius:50%;border:1px solid var(--line-2);
+  background:rgba(14,18,24,.85);color:var(--ink-2);cursor:pointer;backdrop-filter:blur(8px);
+  display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .4s,transform .4s;
+}
+.totop.show{opacity:1;pointer-events:auto}
+.totop:hover{transform:translateY(-3px);border-color:rgba(233,192,122,.5);color:var(--s)}
+
+.flash{animation:flash 1.4s var(--ease)}
+@keyframes flash{
+  0%,100%{box-shadow:0 0 0 0 rgba(233,192,122,0)}
+  25%{box-shadow:0 0 0 2px rgba(233,192,122,.65),0 0 40px -6px rgba(233,192,122,.5)}
+}
+
+@media (max-width:1080px){
+  .mnav{display:none}
+  :root{--rail:76px}
+  .wall{overflow-x:auto;overscroll-behavior-x:contain}
+  .wall-grid{min-width:700px}
+}
+@media (max-width:820px){
+  :root{--rail:52px}
+  .wrap{padding:0 18px}
+  .hero{padding:52px 0 26px}
+  .ev-card{grid-template-columns:46px 1fr;gap:12px;padding:14px 15px}
+  .emblem{width:46px;height:46px;border-radius:12px}
+  .emblem svg{width:24px;height:24px}
+  .ev-side{
+    grid-column:1/-1;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;
+    text-align:left;max-width:none;gap:7px 12px;margin-top:4px;padding-top:9px;border-top:1px dashed var(--line);
+  }
+  .ev-date{flex:0 0 auto}
+  .month-head{top:54px;margin-left:calc(var(--rail) - 40px)}
+  .mnum{font-size:26px;min-width:40px}
+  .foot{grid-template-columns:1fr;gap:20px}
+  .roll-grid{padding-left:0;grid-template-columns:1fr}
+  .roll-note{padding-left:0}
+  .roll-grid .month-head{margin-left:0}
+  .ev-detail{left:0}
+  .d-grid{grid-template-columns:1fr}
+  .ev.open .ev-detail{display:block;position:static;margin-top:10px;opacity:1;visibility:visible;transform:none;pointer-events:auto;max-height:none;overflow:visible}
+  .ev-info{display:grid;place-items:center;right:12px;bottom:auto;top:10px}
+  .ev-date{font-size:12px}
+  .ev-name{font-size:15px}
+  .wall-grid{min-width:640px}
+}
+html.static .ev.open .ev-detail{opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important}
+html.static .ev-card.flash{animation:none!important}
+html.static .ev{opacity:1!important;transform:none!important;transition:none!important}
+html.static *{animation:none!important}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  .ev{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <div class="kicker"><i></i>SEASON CALENDAR · 学生概念赛道</div>
+  <h1>工业设计赛事<br><em>时间轴</em></h1>
+  <p class="lede">
+    <b id="nTop">64</b> 项国内外工业设计赛事，按<b>最早开放征集</b>的日期自上而下排列。单卡即一档窗口——
+    什么时候投什么比赛，一眼看得见。悬停看报名费与评审偏好，点击直达官网。
+  </p>
+  <div class="stats" id="stats"></div>
+  <div class="sbar" id="statusBar" hidden></div>
+  <div class="legend">
+    <span class="lg"><span class="sw s"></span>极高含金量 / 顶级</span>
+    <span class="lg"><span class="sw a"></span>高</span>
+    <span class="lg"><span class="sw b"></span>中高</span>
+    <span class="lg"><span class="sw c"></span>中等及以下</span>
+    <span class="note">徽标与光晕强度随含金量递增，金色卡片为顶级赛事</span>
+  </div>
+  <aside class="hero-now" id="heroNow" hidden>
+    <div class="hn-h"><b>此刻可投</b><span id="hnDay"></span></div>
+    <div id="hnList"></div>
+  </aside>
+</header>
+
+<div class="wrap">
+  <section class="panel" id="wallPanel">
+    <button class="wall-toggle" id="wallToggle" aria-expanded="false">
+      <span class="wt-ico">▾</span>
+      <span class="wt-t">赛季全览 · 12 个月</span>
+      <span class="wt-sub">横轴 12 个月 · 色点=含金量 · 点击跳至对应赛事</span>
+      <span class="wt-hint" id="wallHint">点击展开</span>
+    </button>
+    <div class="wall" id="wallBox"><div class="wall-body"><div class="wall-grid" id="wall"></div></div></div>
+  </section>
+
+  <div class="controls">
+    <div class="ctrl-row">
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="搜索赛事、评审偏好、关键词…" autocomplete="off">
+      </div>
+      <div class="chips" id="filters"></div>
+      <div class="hint" id="count"></div>
+    </div>
+  </div>
+
+  <main class="tl" id="tl">
+    <div class="rail-fill" id="railFill"></div>
+  </main>
+
+  <section class="rolling" id="rolling"></section>
+  <section class="rolling" id="biennial"></section>
+
+  <!-- 二维码弹窗 -->
+  <div class="qr-mask" id="qrMask">
+    <div class="qr-box">
+      <b id="qrName">官方微信公众号</b>
+      <span>该赛事无独立官网，报名 / 通知均通过公众号发布，扫码关注获取最新征集信息</span>
+      <img id="qrImg" alt="微信公众号二维码">
+      <em>点击空白处或按 Esc 关闭</em>
+    </div>
+  </div>
+  <!-- 轻提示 -->
+  <div class="toast" id="toast"></div>
+
+  <footer class="foot">
+    <div>
+      <h3>排序与时间口径</h3>
+      <p id="statusNote" class="statusnote"></p>
+      <p>
+        排序键为各赛事<b>最早开放征集</b>的月/日：凡分多段征集者，取学生组早鸟档与初选（Round 1）所在时段；
+        跨年窗口以「→ 次年」标注并保留跨年续段。时间依据分三档：
+        <b>官方</b>＝官网已公布；<b>往年规律</b>＝按往届月份估算，报名前须复核；
+        <b>阶段时间</b>＝仅公布评审/省赛月份，以该月为锚点；<b>待公告</b>＝仅知启动月份。
+        各赛事届次不一致（2026 / 2027 届），本轴统一按年度月日归位，不作绝对年序比较。
+      </p>
+    </div>
+    <div>
+      <h3>已剔除（勿再排期）</h3>
+      <p class="dead">
+        当代好设计奖 CGD —— 官网 cgdaward.com 已无法访问，仅第三方代理页在售 2026 赛季（5/18–9/19），官方未见当届公告。<br>
+        中国设计红星奖 —— 2020 年后实质停办，官网域名已挂牌出售。<br>CDN 中国汽车设计大赛 / 江淮汽车设计挑战赛 / 紫金奖 / 智博杯 / 青苔国际工业设计大赛 —— 均由官方渠道确认停办，已整体移除，不再排期。<br>
+        红点产品设计奖 / iF 专业组 —— 需已量产上市，非学生概念通道（学生走概念奖、学生奖）。
+      </p>
+    </div>
+
+  </footer>
+
+  <section class="more-src">
+    <h3>更多赛事可关注</h3>
+    <div class="src-grid">
+      <a class="srclink" href="https://www.shejijingsai.com/category/dasai/gongye" target="_blank" rel="noopener noreferrer">
+        <span class="s-badge">设计</span>
+        <span class="s-txt">
+          <b>设计竞赛网 · 工业设计赛道</b>
+          <span>shejijingsai.com/category/dasai/gongye</span>
+        </span>
+        <span class="s-go">前往 ↗</span>
+      </a>
+      <a class="srclink" href="https://www.puxiang.com/subject" target="_blank" rel="noopener noreferrer">
+        <span class="s-badge">普象</span>
+        <span class="s-txt">
+          <b>普象网 · 赛事专题</b>
+          <span>puxiang.com/subject</span>
+        </span>
+        <span class="s-go">前往 ↗</span>
+      </a>
+    </div>
+  </section>
+</div>
+
+<div class="mnav" id="mnav"></div>
+<button class="totop" id="totop" aria-label="回到顶部">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+if(/[?&]static/.test(location.search)) document.documentElement.classList.add('static');
+if(/[?&]lite/.test(location.search) || matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('lite');
+/* ══════════════════════════════════════════════════════════
+   数据层：64 项赛事（来源：工业设计赛事清单_学生概念赛道_2026-11-23 · 30 项已按官网复核窗口）
+   w = [起始月, 起始日, 截止月, 截止日]；null = 全年滚动
+   rank: 4 极高 / 3 高 / 2.5 中高 / 2 中等 / 1 偏低
+   ══════════════════════════════════════════════════════════ */
+const DATA = [
+  {
+    id:'idsa', name:'IDEA 国际设计卓越大奖', en:'IDEA · Student Design', short:'IDEA',
+    url:'https://www.idsa.org/awards-recognitions/idea/', rank:4,
+    level:'境外顶级（美国·IDSA 主办，号称“设计界奥斯卡”）',
+    body:'Industrial Designers Society of America（美国工业设计师协会）',
+    spec:'是（纯工业设计，多类别含 Student Design）',
+    track:'专设学生组：课程期间完成的实物/数字产品、服务或体验',
+    proto:'Round 1 线上材料；进 Round 2 需再付费，不寄实物',
+    pref:'设计创新·问题解决深度·执行完成度；评审严格、获奖率低',
+    cost:'学生：IDSA 会员 150 美元；非会员 725 美元（Round 1）；进 Round 2 再付；建议先入 IDSA 学生会员',
+    w:[1,5,3,16], winText:'1/5 常规 → 3/16 晚期', basis:'往年规律', batch:'2027 届',
+    note:'2026 届：常规 1/5–2/13、晚期延至 3/16、第二轮 4/17–5/4；2027 官网仅写「early 2027」',
+    glyph:'<circle cx="24" cy="24" r="15"/><path d="M24 11l8.5 23M24 11l-8.5 23M18.5 27h11"/>'
+  },
+  {
+    id:'spark', name:'Spark Design Awards', en:'Student Design', short:'Spark',
+    url:'https://www.sparkawards.com', rank:2.5,
+    level:'境外A级（美国，2001 年创立）',
+    body:'Spark Awards（美国，创始人 Peter Kuchnicki）',
+    spec:'是（产品/交通/健康医疗/空间/数字等）',
+    track:'专设学生组：任何设计专业在校生，可用往年作业投稿',
+    proto:'分两阶段：Phase 1 注册 → 入围 → Phase 2 现场评审',
+    pref:'概念创新 + 社会价值；两阶段评审，入围后另交 Phase 2 费用',
+    cost:'学生 Phase 1：160 早鸟 / 180 标准 / 210 晚期；入围再付 180 美元',
+    w:[2,1,11,16], winText:'2 月开放 → 11/16', basis:'往年规律', batch:'2027 届',
+    note:'2026 第 20 届已结束，官网未列具体日期；2027 未公布',
+    glyph:'<path d="M26 5 12 27h9.5L18 43l16-23h-9.5z"/>'
+  },
+  {
+    id:'ncda', name:'未来设计师·全国高校数字艺术设计大赛', en:'NCDA', short:'NCDA',
+    url:'https://www.ncda.org.cn', rank:2,
+    level:'白名单A类',
+    body:'工信部人才交流中心 + 大赛组委会',
+    spec:'数字艺术综合',
+    track:'有（工业产品设计·学生组）',
+    proto:'不需要',
+    pref:'创意概念·视觉表达·故事性；不深究工程逻辑',
+    cost:'免费',
+    w:[3,30,6,20], winText:'3/30 启动 → 6/20', basis:'官方', batch:'年度',
+    note:'第 14 届：通知 3/30 发布、6/20 截稿；省赛 7/1–8/8、国赛 8/9–8/26',
+    glyph:'<path d="M14 35V13l20 22V13"/>'
+  },
+  {
+    id:'adyoung', name:'时报金犊奖', en:'Times Golden Calf', short:'金犊',
+    url:'http://www.ad-young.com', rank:2,
+    level:'观察名单（广告创意类）',
+    body:'旺旺中时媒体集团主办、中国商务广告协会指导',
+    spec:'否',
+    track:'有（产品设计·学生组）',
+    proto:'不需要',
+    pref:'品牌策略·营销创意·传播叙事；IP 文创与品牌衍生品',
+    cost:'命题类免费；非命题类约 100 元/件',
+    w:[3,15,5,15], winText:'3/15 → 5/15（第 35 届）', basis:'官方', batch:'年度',
+    note:'官方参赛办法：作品征集 3/15–5/15；赛区互评 5/25–5/31',
+    glyph:'<path d="M12 15c0 11 5 21 12 23 7-2 12-12 12-23"/><path d="M12 15h8M28 15h8"/><circle cx="19" cy="24" r="1.6" fill="currentColor" stroke="none"/><circle cx="29" cy="24" r="1.6" fill="currentColor" stroke="none"/>'
+  },
+  {
+    id:'goldenpin', name:'金点概念设计奖', en:'Golden Pin Concept', short:'金点',
+    url:'https://goldenpin.org.tw/golden-pin-concept-design-award', rank:4,
+    level:'行业国际A级（非白名单）',
+    body:'台湾设计研究院（TDRI）',
+    spec:'是（产品类为主）',
+    track:'概念组混评（学生可投）',
+    proto:'不需要（线上图档）',
+    pref:'前瞻创新·文化洞察·未来场景；国际评委',
+    cost:'需报名费（有早鸟价）',
+    w:[3,11,6,15], winText:'3/11 → 6/15（含早鸟价）', basis:'官方', batch:'年度',
+    note:'约 3 月 11 日—6 月 15 日报名',
+    glyph:'<circle cx="24" cy="24" r="12.5"/><circle cx="24" cy="24" r="4.6" fill="currentColor" stroke="none"/><path d="M24 4v5M24 39v5M4 24h5M39 24h5"/>'
+  },
+  {
+    id:'dyson', name:'James Dyson Award', en:'戴森设计大奖', short:'戴森',
+    url:'https://www.jamesdysonaward.org', rank:4,
+    level:'境外顶级学生专项（英国·戴森基金会）',
+    body:'James Dyson Foundation（英国戴森基金会）',
+    spec:'偏设计工程与“发明”（产品、装置、系统）',
+    track:'专设学生组：在校生 + 毕业 4 年内；必须是自己发起的发明，解决真实问题',
+    proto:'不需要实物（说明 + 图片 + 视频）',
+    pref:'真实问题·工程可实现性·迭代过程；不看渲染华丽度',
+    cost:'免费参赛',
+    w:[3,11,7,15], winText:'3/11 → 7/15', basis:'往年规律', batch:'2026 届',
+    note:'官网 Key dates 2026 只写 3 月开放 / 7 月截止，日为本轴往年推算',
+    glyph:'<path d="M11 21c6-9 17-9 23-3s5 16-3 20-18 2-21-6"/><path d="M28 25a4 4 0 1 1-8 0 4 4 0 0 1 8 0"/>'
+  },
+  {
+    id:'youth', name:'全国青年设计师大赛', en:'National Young Designer', short:'青年',
+    url:'https://www.ccbkabook.com', rank:2,
+    level:'行业A级（非白名单）',
+    body:'中国工业设计协会 + 40 余所设计院校',
+    spec:'是',
+    track:'有（学生 / 青年设计师）',
+    proto:'不需要',
+    pref:'用户需求·产业落地；鼓励毕业设计参赛',
+    cost:'报名费 198 元/人',
+    w:[3,13,6,30], winText:'3/13 → 6/30', basis:'官方', batch:'年度',
+    note:'第 4 届；报名最早已见 3/13，国赛征集截止 6/30 24:00',
+    glyph:'<circle cx="24" cy="15" r="6.2"/><path d="M11 39c0-7.4 5.6-13 13-13s13 5.6 13 13"/>'
+  },
+  {
+    id:'dia', name:'DIA 中国设计智造大奖', en:'Design Intelligence Award', short:'DIA',
+    url:'https://www.di-award.org', rank:4,
+    level:'行业顶级国际大奖（非白名单）',
+    body:'中国美术学院主办、浙江省政府支持',
+    spec:'是',
+    track:'概念组（混评）',
+    proto:'需要完整功能样机',
+    pref:'智造·智能化·工程实现·产业化潜力；数字经济/产业装备/生活智慧/文化创新',
+    cost:'免费期免费；逾期追加报名 3500 元/件',
+    w:[3,11,9,1], winText:'3/11 → 9/1（免费期至 7/1）', basis:'官方', batch:'年度',
+    note:'第 11 届：免费报名 3/11–7/1，追加报名 7/2–9/1（3500 元/件）',
+    glyph:'<path d="M24 6 40 20l-8 22H16L8 20z"/><path d="M8 20h32M24 6v36"/>'
+  },
+  {
+    id:'avada', name:'亚洲新锐艺术与设计大奖 AVADA', en:'Asia Design Week', short:'AVADA',
+    url:'https://www.asia-design-week.com', rank:2,
+    level:'国内综合赛（亚洲设计周主办，多国协会联合盖章）',
+    body:'主办：亚洲设计周；联合主办含俄罗斯国际设计师协会、澳门国际设计联盟、台北市工业设计发展协会、韩国色彩/插画学会、马来西亚平面设计协会、蒙古、印尼、泰国、阿联酋等协会',
+    spec:'否（艺术 + 设计综合赛，含工业产品设计类）',
+    track:'专设学生类，按类别报名，学生档费用最低',
+    proto:'不需要实物',
+    pref:'创新性·文化表达·社会责任；产品类要求概念完整、视觉强',
+    cost:'学生：报名 90 元/件 + 入围终审 200 元/件',
+    w:[4,21,6,30], winText:'4/21 → 6/30（第一期）', basis:'官方', batch:'2025 届',
+    note:'2026 第一期延至 6/30（初审 7/1–7/15、终审 8/16–8/25、9/1 公示）；第二期 9 月巡展期间开放，截止未公布',
+    glyph:'<circle cx="24" cy="24" r="15"/><path d="M24 11l4 8.4 9.2 1-6.7 6.2 1.7 9.1L24 31.2 15.8 35.7l1.7-9.1L10.8 20.4l9.2-1z"/>'
+  },
+  {
+    id:'kdesign', name:'K-DESIGN AWARD', en:'K-设计大奖', short:'K-Design',
+    url:'https://kdesignaward.com', rank:3,
+    level:'境外A级（韩国·国际综合设计奖）',
+    body:'韩国 K-Design Award 组委会（京畿道安养）',
+    spec:'是（工业 / 空间 / 传达三类）',
+    track:'学生档·混评：毕业 1 年内可投，概念与量产均可',
+    proto:'不需要原型',
+    pref:'创新性 + 商业可行性 + 落地说服力；概念可投但呈现要成品级',
+    cost:'学生：早鸟免费 / 常规 70 / 晚期 85 美元；入围评审 190、获奖者包 75 美元',
+    w:[4,28,6,30], winText:'4/28 早鸟 → 6/30 晚期', basis:'往年规律', batch:'年度',
+    note:'2026 RULES 官方仅列 Late 5/31–6/30 24:00 KST；早鸟期官网未列',
+    glyph:'<path d="M15 10v28M35 10 17 26l18 12"/>'
+  },
+  {
+    id:'mei', name:'制造之美 MEI Awards', en:'MEI Awards', short:'MEI',
+    url:'https://www.meiawards.com', rank:3,
+    level:'行业A级（非白名单）',
+    body:'中国制造网（焦点科技）',
+    spec:'是',
+    track:'无独立学生组（可投概念设计）',
+    proto:'概念组不需要实物',
+    pref:'制造可行性·工艺·材料·成本·市场转化；适合工具/装备/硬件/医疗器具',
+    cost:'免费',
+    w:[4,13,9,15], winText:'4/13 → 9/15', basis:'官方', batch:'年度',
+    note:'2026 报名 4/13–9/15；2027 已开放预报名，截止未公布',
+    glyph:'<circle cx="21" cy="27" r="9"></circle><path d="M21 27 31 16"/><path d="M34 9.5l1.6 4.2 4.2 1.6-4.2 1.6L34 21.1l-1.6-4.2-4.2-1.6 4.2-1.6z"/>'
+  },
+  {
+    id:'d3ds', name:'全国三维数字化创新设计大赛', en:'3D 大赛', short:'3D大赛',
+    url:'https://3dds.3ddl.net', rank:3,
+    level:'白名单A类',
+    body:'工信部、教育部等多部门指导',
+    spec:'数字工业设计赛道',
+    track:'有（学生组分设）',
+    proto:'不需要实物，但需完整 3D 模型 + 装配 + 仿真',
+    pref:'三维建模·内部结构·数字样机·仿真；适配机器人/交通工具/机电装备',
+    cost:'免费',
+    w:[4,3,6,30], winText:'报名 4/3 → 6/30', basis:'官方', batch:'年度',
+    note:'第 19 届：初赛报名 4/3–6/30 24:00；作品提交延至 7/20；省赛 8–10 月',
+    glyph:'<path d="M24 5.5 40 14.8v18.4L24 42.5 8 33.2V14.8z"/><path d="M24 5.5v18.9M8 14.8l16 9.6 16-9.6M24 42.5V24.4"/>'
+  },
+  {
+    id:'kapok', name:'红棉设计奖·设计概念奖', en:'Kapok Design Award', short:'红棉',
+    url:'https://kapok.gzdesignweek.com', rank:2.5,
+    level:'行业A级（非白名单）',
+    body:'广州设计周（IFI 国际认证）',
+    spec:'偏家居产品',
+    track:'有（学生 + 青年设计师概念组）',
+    proto:'不需要',
+    pref:'人居体验·家居美学·生活方式产品；大型装备不占优',
+    cost:'需报名费',
+    w:[4,1,9,30], winText:'4 月启动 → 9/30', basis:'往年规律', batch:'年度',
+    note:'章程 4 月发布、参评至 9/30；颁奖 12/4–12/8 广州设计周',
+    glyph:'<path d="M24 9.5c4.6 5.4 4.6 9.3 0 13.2-4.6-3.9-4.6-7.8 0-13.2z"/><path d="M36.6 19c-2.6 5.6-5.6 8.2-11.2 7.4 0-5.6 2.6-8.4 11.2-7.4z"/><path d="M34 34.5c-6.5 0-9.6-2-9.6-7.6 5.6-.9 9.6.9 9.6 7.6z"/><path d="M14 34.5c0-6.7 4-8.5 9.6-7.6 0 5.6-3.1 7.6-9.6 7.6z"/><path d="M11.4 19c8.6-1 11.2 1.8 11.2 7.4-5.6.8-8.6-1.8-11.2-7.4z"/>'
+  },
+  {
+    id:'cuidc', name:'全国大学生工业设计大赛', en:'CUIDC', short:'CUIDC',
+    url:'https://www.cuidc.net', rank:3,
+    level:'白名单A类',
+    body:'教育部高教司指导；全国工业设计一流专业建设协同创新平台 + 广州美术学院承办',
+    spec:'是',
+    track:'有（校赛→省赛→国赛三级）',
+    proto:'不需要',
+    pref:'综合均衡：用户研究·设计逻辑·社会价值·人机·落地可行性；适配装备/医疗/康养/消费/可持续',
+    cost:'免费',
+    w:[5,26,6,30], winText:'5/26 → 6/30', basis:'官方', batch:'两年一届',
+    note:'第八届：在线报名及提交 5/26–6/30；7/31 只是部分学校校内截止',
+    glyph:'<path d="M24 5.5 39.5 14.2v17.6L24 40.5 8.5 31.8V14.2z"/><circle cx="24" cy="23" r="7"/>', cycle2:true, next:'2028 年',
+  },
+  {
+    id:'gida', name:'金芦苇工业设计奖', en:'Goldreed Industrial Design Award', short:'金芦苇',
+    url:'https://www.goldreedaward.com', rank:4,
+    level:'行业顶级（非白名单）',
+    body:'河北省政府、雄安新区管委会支持',
+    spec:'是',
+    track:'概念组（与设计师、企业同池混评）',
+    proto:'需要样机或模型',
+    pref:'社会价值·低碳可持续·产业装备·医疗·交通·公共设施·未来场景',
+    cost:'免费（运输保险自理）',
+    w:[7,1,7,31], winText:'7/1 → 7/31', basis:'官方', batch:'年度',
+    note:'第七届：申报 7/1–7/31 24:00，逾期概不受理；终评 9/11–9/13',
+    glyph:'<path d="M24 41V13"/><path d="M24 27c-8.4 0-10.6-6.4-10.6-10.6C21.8 16.4 24 22.8 24 27z"/><path d="M24 21c6 0 9-4.2 9-9.2-7 0-9 5-9 9.2z"/>'
+  },
+  {
+    id:'zhongshan', name:'中山市工业设计大赛', en:'Zhongshan Design Award', short:'中山',
+    url:'http://zs-design.siid.com.cn/', rank:2.5,
+    level:'市级政府主办（非白名单）',
+    body:'中山市工业和信息化局',
+    spec:'是',
+    track:'有（综合赛·概念设计组；团队 ≤5 人）',
+    proto:'概念组不需要实物（终评答辩）',
+    pref:'创新性·实用性·可行性·可持续性·商业性；类别：AI 与协作机器人/家电/计量器具/照明器具/五金制品/办公家具',
+    cost:'免费；终评学生可申请 ≤500 元差旅报销',
+    w:[7,1,11,8], winText:'7 月启动 → 11/8', basis:'往年规律', batch:'年度',
+    note:'2026 主题“设计赋能十五五”；征集 7 月—10 月底，延期至 11/8 24:00',
+    glyph:'<rect x="12.5" y="12.5" width="23" height="23" rx="4"/><path d="M24 8v32M8 24h32"/>', tags:['local'],
+  },
+  {
+    id:'did', name:'东莞杯 DiD Award 国际工业设计大赛', en:'DiD Award', short:'东莞杯',
+    url:'https://did.gd-id.com', rank:3,
+    level:'行业A级（市政府主办，非白名单）',
+    body:'东莞市人民政府',
+    spec:'是',
+    track:'有概念组（学生可投）',
+    proto:'不需要',
+    pref:'产业转化·市场落地·创新造型；消费产品/小家电/装备/民生',
+    cost:'免费',
+    w:[9,16,11,9], winText:'9/16 → 11/9', basis:'官方', batch:'年度',
+    note:'第 21 届：征集 9/16 起，原定 11/6、延期至 11/9 24:00',
+    glyph:'<path d="M15 11h18v10a9 9 0 0 1-18 0z"/><path d="M33 14h4.5a4.5 4.5 0 0 1 0 9H33"/><path d="M24 30v6M17.5 40h13"/>', tags:['local'],
+  },
+  {
+    id:'cndesigners', name:'当代艺术设计作品大赛', en:'Contemporary Art & Design', short:'当代',
+    url:'https://www.cndesigners.com', rank:1,
+    level:'不在榜单',
+    body:'《当代艺术设计》期刊编委会',
+    spec:'否',
+    track:'有（院校学生组）',
+    proto:'不需要',
+    pref:'艺术美学·氛围叙事；偏期刊收录性质',
+    cost:'需投稿费（早鸟约 50 HKD / 正常 100 HKD）',
+    w:[7,1,11,15], winText:'7/1 早鸟 → 11/15', basis:'官方', batch:'年度',
+    note:'早鸟 7/1–9/15（50HKD）、正式 9/16–11/15（100HKD）；12 月公布',
+    glyph:'<path d="M10 33.5c8.2 2.4 12.4-1.6 14.6-8 2.2-7.2 6.2-12.4 13.8-14.2-1.6 10.2-3.8 16.4-8 20.4-5 4.8-12.2 5.8-20.4 1.8z"/><path d="M10 38h28"/>'
+  },
+  {
+    id:'milan', name:'米兰设计周·中国高校设计学科师生优秀作品展', en:'Milan Design Week · China', short:'米兰',
+    url:'https://www.milan-aap.org.cn', rank:2.5,
+    level:'白名单A类',
+    body:'中国教育国际交流协会、中国高等教育学会发起',
+    spec:'综合设计展',
+    track:'有（学生产品组）',
+    proto:'不需要',
+    pref:'人文创新·美学表达·社会议题；包容前瞻概念',
+    cost:'免费（部分专项赛收费）',
+    w:[10,1,3,31], winText:'10 月启动 → 次年 3/31', basis:'官方', batch:'年度',
+    note:'第 11 届；报名截止 2027/3/31，4 月为省赛/国赛与米兰展出',
+    glyph:'<path d="M9 38V25a5 5 0 0 1 10 0v13M20 38V18a5 5 0 0 1 10 0v20M31 38V25a5 5 0 0 1 10 0v13"/>'
+  },
+  {
+    id:'cdec', name:'中国好创意暨全国数字艺术设计大赛', en:'CHINA CREATIVE · 3C', short:'3C',
+    url:'https://www.cdec.org.cn', rank:2,
+    level:'白名单A类',
+    body:'教育部高教学会榜单赛项',
+    spec:'数字艺术大类',
+    track:'有（产品创新组·学生）',
+    proto:'不需要实物',
+    pref:'数字创意·视觉叙事·画面表现；工程与制造逻辑权重低',
+    cost:'免费（含作品版权存证）',
+    w:[10,20,5,31], winText:'10/20 → 次年 5/31', basis:'官方', batch:'第 21 届',
+    note:'第 21 届：报名及截稿 10/20–次年 5/31 17:00；校赛推优次年 6/1–6/5',
+    glyph:'<circle cx="24" cy="24" r="14"/><path d="M17 24h14M24 17v14"/>'
+  },
+  {
+    id:'bda', name:'「越来越好」国际设计大赛', en:'BDA · Better Design Award', short:'BDA',
+    url:'https://www.bdaward.com', rank:3,
+    level:'行业A级（非白名单）',
+    body:'广东省工业和信息化厅',
+    spec:'是',
+    track:'有（学生概念组，含毕业 2 年内）',
+    proto:'复评与终评需样机 + 演示视频',
+    pref:'产业前瞻·系统性创新·低碳；工业基础 / Better Life / 未来设计三组',
+    cost:'以官网当年公告为准',
+    w:[10,8,12,12], winText:'10/8 → 12/12', basis:'官方', batch:'2026 届',
+    note:'第三届：全球征集 10/8–12/12；复评次年 1 月、颁奖次年 3 月',
+    glyph:'<path d="M9 37 22 12l6.5 11L37 15"/><path d="M9 37h30"/><path d="M37 15v6M37 15h-6"/>'
+  },
+  {
+    id:'oda', name:'东方设计奖 · 全国高校创新设计大赛', en:'ORIENTAL DESIGN AWARD', short:'ODA',
+    url:'https://oda.org.cn', rank:2,
+    level:'观察名单（非 A 类主榜）',
+    body:'中国贸促会商业行业委员会 + 国家工业设计研究院',
+    spec:'否（综合高校设计赛）',
+    track:'有（产品学生组）',
+    proto:'不需要',
+    pref:'东方美学·传统文化·民生可持续；文化类概念易出彩',
+    cost:'免费',
+    w:[11,1,5,10], winText:'11 月启动 → 次年 5/10', basis:'官方', batch:'年度',
+    note:'第 13 届主赛投稿 2026/11–2027/5/10；专项赛另有独立窗口',
+    glyph:'<circle cx="24" cy="21" r="9"/><path d="M24 5v6M36 21h5M7 21h5M12 9l4 4M13 37h22"/>'
+  },
+  {
+    id:'huacan', name:'两岸新锐设计竞赛·华灿奖', en:'Huacan Award', short:'华灿',
+    url:'https://cahe.edu.cn/site/term/906.html', rank:2.5,
+    level:'白名单A类',
+    body:'中国高等教育学会主办',
+    spec:'综合设计赛',
+    track:'有（创意赛道·产品设计·高校学生组）',
+    proto:'不需要',
+    pref:'中华文化·非遗活化·两岸融合·社会民生；硬核装备竞争力弱',
+    cost:'免费',
+    w:[10,19,11,27], winText:'10/19 → 11/27 17:00', basis:'官方', batch:'年度',
+    note:'创意赛道截止 11/27 17:00；校赛 12/29、赛区赛次年 1/29、定向主题次年 3/5',
+    glyph:'<path d="M16 12a12 12 0 0 0 0 24"/><path d="M32 12a12 12 0 0 1 0 24"/><circle cx="24" cy="24" r="3.2"/>'
+  },
+  {
+    id:'lanqiao', name:'蓝桥杯·视觉艺术设计赛（工业产品设计）', en:'Lanqiao Cup', short:'蓝桥杯',
+    url:'https://design.lanqiao.cn', rank:2,
+    level:'白名单A类',
+    body:'工信部人才交流中心',
+    spec:'否（IT 赛事下属设计子赛道）',
+    track:'有（1—3 人团队，非命题）',
+    proto:'不需要',
+    pref:'渲染视觉·版面美学；工程与制造逻辑权重低',
+    cost:'报名费约 300 元/件',
+    w:[10,8,4,26], winText:'10/8 → 次年 4/26', basis:'官方', batch:'年度',
+    note:'第十八届：报名及提交 10/8 10:00–次年 4/26 14:00；校赛次年 4/28',
+    glyph:'<path d="M7 32h34"/><path d="M11 32a13 13 0 0 1 26 0"/><path d="M17 20.5V32M24 17v15M31 20.5V32"/>'
+  },
+  {
+    id:'adp', name:'Asia Design Prize 亚洲设计奖', en:'Asia Design Prize', short:'ADP',
+    url:'https://asiadesignprize.com', rank:3,
+    level:'境外A级（韩国·面向亚洲的国际奖）',
+    body:'韩国 Asia Design Prize 组委会（首尔颁奖）',
+    spec:'是（Space / Industrial / Communication）',
+    track:'学生档·混评：毕业 1 年内可投，概念与量产均可',
+    proto:'不需要原型',
+    pref:'“亚洲设计的传承与当代性”；造型完成度 + 概念叙事',
+    cost:'早鸟免费 / 标准 60 / 晚期 75 美元；入围评审 185 美元',
+    w:[10,31,12,30], winText:'10/31 标准 → 12/30 晚期', basis:'官方', batch:'2027 届',
+    note:'Prize 2027：标准 10/31–12/2、晚期 12/3–12/30 24:00 KST',
+    glyph:'<circle cx="24" cy="24" r="13"/><path d="M11 24h26M24 11c5.2 6.4 5.2 19.6 0 26M24 11c-5.2 6.4-5.2 19.6 0 26"/>'
+  },
+  {
+    id:'ifdesign', name:'iF DESIGN STUDENT AWARD', en:'iF 学生设计奖', short:'iF',
+    url:'https://ifdesign.com', rank:4,
+    level:'境外顶级学生专项（德国 iF）',
+    body:'iF International Forum Design GmbH（汉诺威），iF DESIGN TALENTS 非营利公司运营',
+    spec:'是（按联合国 SDGs 1–15 分 15 类）',
+    track:'专设学生组（在读 + 近年毕业生），只收概念',
+    proto:'不需要实物',
+    pref:'社会·生态·技术议题的解决力，紧扣 SDGs；概念前瞻性与叙事完整度',
+    cost:'免费参赛；总奖金 5 万欧元',
+    w:[11,15,2,3], winText:'11/15 开放 → 次年 2/3', basis:'往年规律', batch:'2027 届',
+    note:'2027 第 25 届：截止 2/3/2027，线上评审 3/10–3/19、决赛 4/23 柏林；开放日官网仅写 now open',
+    glyph:'<path d="M16 15v19"/><circle cx="16" cy="9" r="1.9" fill="currentColor" stroke="none"/><path d="M25 34V15h9a6 6 0 0 1 0 12h-9"/>'
+  },
+  {
+    id:'muse', name:'MUSE Design Awards', en:'MUSE 设计奖', short:'MUSE',
+    url:'https://www.muse.world', rank:2.5,
+    level:'境外A级（美国·IAA 国际商业设计奖）',
+    body:'International Awards Associate（IAA，美国纽约，2015 年成立）',
+    spec:'否（综合设计奖：建筑 / 室内 / 产品 / 照明 / 包装 / 概念）',
+    track:'学生可投·混评：无独立学生组，18 岁以上学生/团队均可投',
+    proto:'不需要实物（线上评审）',
+    pref:'美观·可用·影响力；评委由建筑师、产品设计师、创意总监组成',
+    cost:'约 219 美元/首件（2027 届早鸟档，专业与学生同价），另加 30 美元行政费/人；加报类别递减',
+    w:[11,19,2,25], winText:'11/19 早鸟 → 次年 2/25 延期', basis:'官方', batch:'2027 届',
+    note:'2027：早鸟 11/19、常规 12/17、最终 1/14、延期 2/25',
+    glyph:'<path d="M12 38V15l12 12 12-12v23"/><path d="M12 15c0-4.4 4-6 6.4-2M36 15c0-4.4-4-6-6.4-2"/>'
+  },
+  {
+    id:'epda', name:'European Product Design Award', en:'EPDA · Emerging 学生组', short:'EPDA',
+    url:'https://www.productdesignaward.eu', rank:2.5,
+    level:'境外A级（Farmani Group 持有，香港公司获授权运营）',
+    body:'Farmani Group（美国洛杉矶，IDA 等同门）；由 Blue Dot Solutions Ltd（香港）获授权运营',
+    spec:'是（纯产品设计，含概念与原型）',
+    track:'专设学生组：Emerging EPDA —— 学生/院校专设组，收概念与原型',
+    proto:'不需要实物',
+    pref:'创新性·可用性·可持续·完成度；149 个细分类目覆盖全品类',
+    cost:'标准 400 欧元/件；学生 5 折 200 欧元/件；同作品加报每类 200 欧元；获奖不再追加任何费用',
+    w:[11,13,5,7], winText:'11/13 早鸟截止 → 次年 5/7 关闭', basis:'官方', batch:'2027 届',
+    note:'2027 届：早鸟 11/13、延长早鸟 1/15、常规 3/19、最终 4/16、5/7 通道关闭；报名通道 10 月起开放，官方未标开放日',
+    glyph:'<circle cx="24" cy="24" r="12" stroke-dasharray="3 5"/><path d="M24 17l2.2 4.7 5.1.6-3.8 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.8-3.4 5.1-.6z"/>'
+  },
+  {
+    id:'reddot', name:'红点设计概念大奖', en:'Red Dot Award: Design Concept', short:'红点',
+    url:'https://www.red-dot.org/design-concept', rank:4,
+    level:'境外顶级（德国红点，新加坡评审与颁奖）',
+    body:'德国 Design Zentrum Nordrhein Westfalen（红点设计中心）',
+    spec:'是（产品 / 传达 / 环境等，概念向）',
+    track:'学生可投·混评：专收未量产概念，学生与青年设计师均可投',
+    proto:'原型可选（按体积另收费：小 150 / 中 250 / 大 500 新币）',
+    pref:'前瞻概念·社会议题·完成度；不要求量产但创新点要清晰',
+    cost:'199（早鸟）/ 298（常规）/ 398（追加）欧元；30 岁以下及学生 Next Gen 享 30% 折扣；获奖权益包 2652 欧起',
+    w:[12,1,4,28], winText:'12/1 早鸟 → 次年 4/28', basis:'官方', batch:'年度',
+    note:'2027：早鸟 12/1–1/20、常规 1/21–3/17、晚期 3/18–4/28',
+    glyph:'<circle cx="24" cy="25.5" r="12"/><circle cx="24" cy="25.5" r="4.8" fill="currentColor" stroke="none"/><path d="M24 6.5v4.5"/>'
+  },
+  {
+    id:'core77', name:'Core77 Design Awards', en:'Core77', short:'Core77',
+    url:'https://designawards.core77.com/', rank:3,
+    level:'境外A级（美国 Core77 设计媒体主办）',
+    body:'Core77（美国，1995 年创立的设计媒体平台）',
+    spec:'是（20 个设计门类：消费科技/家居/交通/社会影响/工具等）',
+    track:'专设学生组：每个类别分 Professional / Student 两档独立评选',
+    proto:'不需要实物',
+    pref:'项目叙事与过程（intent + rigor）；鼓励视频陈述，不只看效果图',
+    cost:'学生：70 美元早鸟 / 85 常规 / 110 晚期',
+    w:[12,10,3,28], winText:'12/10 开放 → 次年 3/28', basis:'往年规律', batch:'2027 届',
+    note:'2026 已结束，官网未发布 2027 窗口；日为本轴往年推算',
+    glyph:'<path d="M13 14h8.4L17 36M27 14h8.4L31 36"/>'
+  },
+  {
+    id:'cmit', name:'全国大学生数字媒体科技作品及创意设计竞赛（数媒竞赛）', en:'CHINA MEDIA TECH', short:'数媒',
+    url:'https://www.cmit.cn', rank:3.0,
+    level:'白名单A类（高教学会学科竞赛榜单赛项）',
+    body:'中国人工智能学会主办；江苏理工学院等高校承办',
+    spec:'否（数字媒体/智能交互综合，含智能产品方向）',
+    track:'【专设学生组】在校生组队（1–5人）；课程作品、AIGC 数字创意、智能产品概念均可投',
+    proto:'不需要实物（线上评审＋线上答辩）',
+    pref:'数字技术＋创意融合、交互逻辑、场景叙事、AIGC 应用；纯外观静态渲染偏弱',
+    cost:'免费',
+    w:[6,1,9,21], winText:'约 6 月启动 → 9/21 截稿', basis:'往年规律', batch:'2027 届',
+    note:'2025 届作品提交截止 9/21；校赛→省赛→国赛三级，院校统一报送；官网 cmit.cn / mit.caai.cn｜已截止｜2025 届 9/21 截稿，2026 第十三届 9 月已办；下届 2027 约 6 月启动、9 月截稿（以 cmit.cn 通知为准）',
+    
+  },
+  {
+    id:'foshan', name:'佛山“市长杯”工业设计大赛', en:'FOSHAN MAYOR CUP', short:'佛山',
+    url:'https://www.foshanid.cn', rank:3.0,
+    level:'市级政府主办（非白名单）',
+    body:'佛山市工业和信息化局',
+    spec:'是',
+    track:'【学生可投·混评】分产品组/概念设计组/产业设计组，概念组收未量产方案',
+    proto:'初评展板；决赛按当年细则提交模型（以细则为准）',
+    pref:'泛家居、CMF、智能装备、医疗健康；产业转化与工艺落地',
+    cost:'免费',
+    w:[8,1,9,30], winText:'8 月启动 → 9/30', basis:'往年规律', batch:'第 11 届',
+    note:'2026 第十届：8–9 月征集、9–10 月评审、11–12 月总结；一年一届｜已截止｜2026 第十届 8/12 公告、征集 8–9 月；11/5 公示拟获奖；每年一届 → 2027 约 8 月',
+     tags:['local'],
+  },
+  {
+    id:'haixia', name:'“中国·海峡”海峡杯工业设计大赛', en:'STRAIT CUP', short:'海峡',
+    url:'http://www.fjcid.com', rank:3.0,
+    level:'省级政府主办（非白名单）',
+    body:'福建省工业和信息化厅',
+    spec:'是',
+    track:'【学生可投·混评】概念类（产品类须近两年已上市/量产）；概念作品须未上市未产业化',
+    proto:'⚠入围终评须寄送实物或模型＋完成 3D 建模提交，否则视为放弃终评资格',
+    pref:'可产业化特质、晋江轻工与鞋服产业、制造工艺',
+    cost:'免费',
+    w:[9,1,11,30], winText:'约 9 月启动 → 11 月底', basis:'待公告', batch:'第 11 届',
+    note:'第十届 2025 已收官（2025/12/29 公布获奖）；往届获奖同一作品不得再投；组队≤5 人｜待公告｜第十届 2025 已收官（2025/12/29 公布）；第十一届时间未公布，通常 9–10 月启动',
+     cycle2:true, next:'2027 年', tags:['local'],
+  },
+  {
+    id:'qingdao', name:'青岛“市长杯”工业设计大赛', en:'QINGDAO MAYOR CUP', short:'青岛',
+    url:'http://gxj.qingdao.gov.cn', rank:3.0,
+    level:'市级政府主办（非白名单）',
+    body:'青岛市工业和信息化局',
+    spec:'是',
+    track:'【学生可投·混评】分产品组／概念组，概念组设“新星奖”50 个',
+    proto:'初评线上；终评按当年细则（模型/视频）',
+    pref:'产业装备、交通工具、智慧生活、人工智能、数字技术、品牌传播',
+    cost:'免费',
+    w:[9,1,9,30], winText:'9 月启动 → 9/30', basis:'往年规律', batch:'两年一届',
+    note:'2025 第八届 9 月征集、11 月公布，405 件参评；提报走官方表单（gxj.qingdao.gov.cn 通知页）｜已截止｜2025 第八届 征集至 9/30（405 件）；两年一届 → 下届 2027 年 9 月',
+     link:'note', noteHint:'青岛“市长杯”两年一届，下一届为 2027 年（第 9 届）；该赛无独立官网，报名以青岛市工业和信息化局通知 / 官方公众号为准。', cycle2:true, next:'2027 年', tags:['local'],
+  },
+  {
+    id:'wenzhou', name:'温州国际设计双年赛', en:'WENZHOU BIENNALE', short:'温州',
+    url:'https://wzdb.zjcst.edu.cn', rank:2.5,
+    level:'市级＋院校联合主办（非白名单）',
+    body:'中共温州市委宣传部、浙江安防职业技术学院',
+    spec:'是（产品/环艺/海报三赛项）',
+    track:'【专设学生组】产品设计赛项分专业组/学生组；学生组限国内外院校全日制在校生',
+    proto:'线上图档；入围终评按《终评须知》',
+    pref:'应急安防、智能服务、时尚轻工、文创非遗、AI 类；2026 主题“数安山海·智汇园博”',
+    cost:'免费',
+    w:[2,1,6,30], winText:'2 月启动 → 6/30', basis:'往年规律', batch:'两年一届',
+    note:'⚠两年一届；原名“双年展”，2026 年更名“双年赛”（第六届 2 月发征集）｜已截止｜2026 第六届 报名至 6/30 24:00（实物寄达 10/15）；终评 10/30 后、展期 11/6–12/6；两年一届 → 2028',
+     cycle2:true, next:'2028 年', tags:['local'],
+  },
+  {
+    id:'goda', name:'金桂工业设计大赛（GODA）', en:'GODA · GUANGXI', short:'金桂',
+    url:'https://www.godaaward.com', rank:3.0,
+    level:'自治区级政府支持（非白名单）',
+    body:'金桂赛组委会；承办：哈尔滨创意设计中心、广西未来人工智能工业设计创新中心；自治区工信厅等 20 余家单位支持',
+    spec:'是',
+    track:'【学生可投·混评】三大赛道（桂品焕新赛／东盟应用赛／全民创意赛）均设概念组',
+    proto:'线上图档；复评/终评按当年细则',
+    pref:'产业适配、文化美学、创新、实用、可持续；桂品产业与东盟场景',
+    cost:'免费',
+    w:[6,1,8,7], winText:'6 月启动 → 8/7', basis:'往年规律', batch:'2027 届',
+    note:'2026 征集 6–7 月（延期至 8/7），9 月底颁奖；一年一届｜已截止｜2026 征集 6–7 月（延期至 8/7）；9 月底颁奖；每年一届 → 2027 约 6 月',
+     tags:['local'],
+  },
+  {
+    id:'taipei', name:'台北设计奖 Taipei Design Award', en:'TAIPEI DESIGN AWARD', short:'台北',
+    url:'https://taipeidaward.taipei', rank:3.0,
+    level:'境外（中国台湾地区·市政府主办）',
+    body:'台北市政府产业发展局',
+    spec:'是（工业设计／视觉传达／公共空间）',
+    track:'【学生可投·混评】工业设计类收未量产概念；作品须 2024/1/1 之后完成',
+    proto:'初评线上；决审按当年简章（工业设计类需模型）',
+    pref:'社会价值、可持续、商业落地；英文说明 1200 字符内',
+    cost:'免费（参赛与展出均不收费）',
+    w:[5,1,7,31], winText:'约 5 月启动 → 7/31', basis:'往年规律', batch:'第 19 届',
+    note:'2025 报名截止 7/31；团队以 1 人为代表；⚠获奖模型所有权归主办方，不退｜已截止｜2025 报名至 7/31；通常每年 5–7 月征集，2026 届以官网公告为准',
+    
+  },
+  {
+    id:'tisdc', name:'台湾国际学生创意设计大赛（TISDC）', en:'TISDC', short:'TISDC',
+    url:'https://www.google.com/search?q=台湾国际学生创意设计大赛', rank:2.5,
+    level:'学生专项（中国台湾地区）',
+    body:'台湾地区教育主管部门主办；历届由台湾师范大学等承办',
+    spec:'是（产品设计类）',
+    track:'【专设学生组】仅限在校学生；产品设计类收概念',
+    proto:'初评线上；决审需模型（以当年简章为准）',
+    pref:'人文关怀、社会议题、可持续、文化转译',
+    cost:'免费',
+    w:[4,1,7,31], winText:'约 4 月启动 → 7/31', basis:'待公告', batch:'年度',
+    note:'⚠本次未核到可验证官网与最新简章，投递前须先确认报名渠道与截稿日｜待核｜2026 征集窗口未核到（往届约 4–6 月启动、7 月截稿），须先确认官网',
+    
+  },
+  {
+    id:'windmill', name:'风车杯·中国玩具和婴童用品创意设计大赛', en:'WINDMILL CUP', short:'风车',
+    url:'http://wjyt-china.com/events/competition', rank:3.0,
+    level:'行业协会主办（非白名单）',
+    body:'中国玩具和婴童用品协会（中国玩协）；协办：地方镇政府',
+    spec:'是（玩具/婴童专项）',
+    track:'【学生可投·混评】按年度主题（如潮流玩具、国潮 IP）提交概念方案',
+    proto:'初评图档；入围按当年细则需实物/模型',
+    pref:'婴童安全、益智交互、潮玩 IP、亲子场景、可生产性',
+    cost:'免费',
+    w:[5,1,7,12], winText:'约 5 月启动 → 7/12', basis:'待公告', batch:'第 16 届',
+    note:'2024 第 15 届（7/12 截止、9/2 公布）；一年一届；仅玩具/婴童品类｜待核｜2024 第15届 7/12 截止；2025–2026 未见新一届公告（名义每年一届，须确认）',
+    
+  },
+  {
+    id:'yongkang', name:'五金创新设计大奖（原中国五金产品国际工业设计大赛）', en:'HARDWARE INNOVATION', short:'五金',
+    url:'http://www.ykwjdesign.com', rank:3.0,
+    level:'市级政府主办（非白名单）',
+    body:'永康市人民政府；市科技局、浙江永康五金生产力促进中心承办',
+    spec:'是（五金/工具/家居五金专项）',
+    track:'【学生可投·混评】创意类分项赛收概念方案；产品类收可快速产品化设计',
+    proto:'线上图档；入围终评按分项赛细则',
+    pref:'五金工艺与结构可行性、工具/厨卫/户外五金、产业落地',
+    cost:'免费',
+    w:[9,1,10,31], winText:'约 9 月启动 → 10/31', basis:'往年规律', batch:'第 22 届',
+    note:'2026 第 21 届 10/31 截稿；含飞剑杯/荣亚杯/立久佳杯/青沐杯/步阳杯/四方杯等分项赛，投稿时须选分项赛｜已截止｜2026 第21届 10/31 24:00（初评 11 月中、复评 12 月下、颁奖 2027/3–4）；每年一届 → 2027 约 9 月',
+     tags:['local'],
+  },
+  {
+    id:'yuanmingyuan', name:'圆明园文创设计大赛', en:'YUANMINGYUAN CULTURAL', short:'圆明园',
+    url:'http://www.yuanmingyuanpark.cn', rank:2.5,
+    level:'景区/国企主办（非白名单）',
+    body:'北京市海淀区圆明园管理处、北京海淀文化旅游产业发展集团',
+    spec:'否（文创/产品/视觉综合）',
+    track:'【学生可投·混评】专业组含产品设计、创意设计、AI 视觉三大板块，国内外高校可投',
+    proto:'初评线上；入围终评提交详尽方案至指定邮箱',
+    pref:'圆明园文化转译、四季活动与节庆 IP、文创产品可生产性',
+    cost:'免费',
+    w:[5,1,8,31], winText:'约 5 月启动 → 8/31', basis:'往年规律', batch:'第 7 届',
+    note:'第六届 2026.5–10，征集截止 8/31；走“圆明园文创大赛”公众号报名；须紧扣园区 IP｜已截止｜第六届 征集 2026/5–8/31；评审 9 月；每年一届 → 2027 约 5 月',
+    mult:'⛔禁一稿多投（章程明载“禁止一稿多投、不得同时申报其他同类赛事”）',
+  },
+  {
+    id:'huabi', name:'华笔奖·“励致杯”民用家居设计大赛', en:'HUABI · LIZHI CUP', short:'华笔',
+    url:'http://www.chinagdf.com.cn/sj/2026_lzb.html', rank:2.5,
+    level:'行业协会主办（非白名单）',
+    body:'广东省家具协会、共青团广东省家具行业工作委员会、珠海励致洋行办公家私',
+    spec:'是（民用家具专项）',
+    track:'【学生可投·混评】概念方案可投，设计院校学生为主要参赛群',
+    proto:'线上图档（报名表＋展板）；入围按细则',
+    pref:'“绿色、雅致、智能”的好房子；空间复合与模块化、低碳材料、人机舒适',
+    cost:'免费',
+    w:[3,17,12,31], winText:'3/17 → 12/31', basis:'官方', batch:'第 2 届',
+    note:'第二届 2026：征集 3/17–12/31，一年一届；华笔奖系列另有冠美杯/宜奥杯/红古轩杯等子赛｜进行中｜第二届 2026 征集 3/17–12/31；华笔奖系列其他子赛日程各异',
+    
+  },
+  {
+    id:'longteng', name:'龙腾之星·全国大学生绿色设计大赛', en:'DRAGON STAR GREEN', short:'龙腾',
+    url:'http://dstar.ddfddf.com', rank:2.5,
+    level:'行业赛（学生专项，非白名单）',
+    body:'北京设计学会等（原“全球大学生绿色设计大赛”）',
+    spec:'是（绿色/可持续专项）',
+    track:'【专设学生组】国内外高校在校生（本硕博）',
+    proto:'线上 A3 展板或 ≤3 分钟视频；不需要实物',
+    pref:'绿色人居/绿色产品/绿色视觉/AIGC 绿色创新；低碳与循环',
+    cost:'免费',
+    w:[8,1,10,31], winText:'约 8 月启动 → 10 月底', basis:'待公告', batch:'第 7 届',
+    note:'2025 第六届（10 月底截止）；官网 dstar.ddfddf.com｜待核｜2025 第六届 10 月底截止；2026 第七届未见公告（名义每年一届，须确认）',
+    
+  },
+  {
+    id:'saic', name:'上汽设计国际挑战赛（SDC）', en:'SAIC DESIGN CHALLENGE', short:'上汽',
+    url:'https://www.saicdesignchallenge.com', rank:4.0,
+    level:'车企命题赛（非白名单）',
+    body:'上汽集团设计中心（2013 年起已办 14 届）',
+    spec:'是（汽车造型专项）',
+    track:'【专设学生组】全球设计类院校在校生／应届毕业生',
+    proto:'❌不需要实物：10 页 A3 图档（草图＋前后 45° 渲染＋Package 尺寸）',
+    pref:'研究依据、造型推导、Package 与人机、品牌基因；须英文说明',
+    cost:'免费',
+    w:[3,1,6,7], winText:'约 3 月启动 → 6/7', basis:'往年规律', batch:'2027 届',
+    note:'2026 届截止 6/7；提交平台 saicdesignchallenge.com；命题制｜已截止｜2026 届 6/7 截稿；通常每年 3–4 月启动、6 月截止 → 2027 约 3 月',
+     tags:['auto'],
+  },
+  {
+    id:'gac', name:'广汽设计大赛（GAC Design Award）', en:'GAC DESIGN AWARD', short:'广汽',
+    url:'', rank:4.0,
+    level:'车企命题赛（非白名单·无独立官网）',
+    body:'广州汽车集团（广汽研究院／造型设计院）',
+    spec:'是（汽车造型专项）',
+    track:'【专设学生组】仅在校学生，且仅接受个人报名（不接受小组）',
+    proto:'❌不需要实物：2 张 A3 展板＋可选介绍视频',
+    pref:'品牌基因契合、主题内核、造型完成度、AI 辅助创作能力',
+    cost:'免费',
+    w:[3,1,6,17], winText:'约 3 月启动 → 6/17', basis:'往年规律', batch:'第 11 届',
+    note:'2026 命题“明日之镜Ⅲ·RENAISSANCE”；6/17 截稿、8 月总决赛；分亚洲/欧洲/北美三赛区；⚠未见独立官网，以官方公众号公告为准｜已截止｜2026 第十届 6/17 截稿、8 月决赛；每年一届 → 2027 约 3 月',
+     link:'qr', qr:'assets/qr/gac.png', tags:['auto'],
+  },
+  {
+    id:'byd', name:'比亚迪全球汽车设计大赛', en:'BYD DESIGN AWARD', short:'比亚迪',
+    url:'https://www.byd.com', rank:3.0,
+    level:'车企命题赛（非白名单）',
+    body:'比亚迪；联合清华美院、央美、川美、南艺、天美',
+    spec:'是（汽车造型/改装专项）',
+    track:'【专设学生组】面向全球在校生，仅个人参赛',
+    proto:'❌不需要实物：展板＋3D 数模＋可选动画视频',
+    pref:'命题制（“万象宇宙”“铂金秘境”等）；造型原创、概念完整、工程量感',
+    cost:'免费',
+    w:[4,1,6,24], winText:'约 4 月启动 → 6/24', basis:'往年规律', batch:'2027 届',
+    note:'2026 届 6/24 截稿；报名走微信小程序“比亚迪全球汽车设计大赛”｜已截止｜2026 届 6/24 截稿；每年一届 → 2027 约 4 月',
+     tags:['auto'],
+  },
+  {
+    id:'dongfeng', name:'“东风梦想车”国际青年汽车创意设计大赛', en:'DONGFENG DREAM CAR', short:'东风',
+    url:'https://www.dfmc.com.cn/news/company/news_20260324_0941.html', rank:3.0,
+    level:'车企命题赛（非白名单）',
+    body:'东风汽车集团、东风公益基金会、中国青年创业就业基金会',
+    spec:'是（汽车造型专项）',
+    track:'【专设学生组】国内外高校学生组队；设主赛道＋共创分赛道（车衣设计）',
+    proto:'❌不需要实物：线上图档/视频，决赛答辩',
+    pref:'命题“起跑·奕起上场”；东风基因、艺术表现、创新性',
+    cost:'免费',
+    w:[3,23,11,4], winText:'3/23 启动 → 11/4 决赛', basis:'往年规律', batch:'两年一届',
+    note:'第八届 2026.3 启动、11 月决赛；官网为历年报名站，以当年公告为准｜已截止｜第八届 2026/3/23 启动、11/4 决赛；两年一届 → 下届约 2028',
+     cycle2:true, next:'2028 年', tags:['auto'],
+  },
+  {
+    id:'chery', name:'奇瑞全球设计大赛（CADA）', en:'CHERY CADA', short:'奇瑞',
+    url:'https://xhslink.cn/o/3IQJ5e3G7YJ', rank:3.0,
+    level:'车企命题赛（非白名单）',
+    body:'奇瑞汽车设计中心',
+    spec:'是（汽车造型专项）',
+    track:'【专设学生组】全球在校学生，整车/概念出行载具',
+    proto:'不需要实物：展板＋渲染',
+    pref:'家用新能源、轻量化、城市通勤载具、功能落地性',
+    cost:'免费',
+    w:[3,1,6,15], winText:'约 3 月启动 → 6/15', basis:'往年规律', batch:'2027 届',
+    note:'2026 届 6/15 截稿；报名走“CADA 全球设计大赛”公众号；⚠无独立官网｜已截止｜2026 届 6/15 截稿；每年一届（报名走公众号）',
+     tags:['auto'],
+  },
+  {
+    id:'dnaparis', name:'DNA Paris Design Awards（巴黎 DNA 设计奖）', en:'DNA PARIS', short:'DNA',
+    url:'https://dna.paris', rank:2.5,
+    level:'境外A级（法国，Farmani Group 主办）',
+    body:'Farmani Group（1985 年起，IDA/EPDA/AMP 同门）＋ In Between（巴黎）',
+    spec:'是（Product 类）',
+    track:'【专设学生组】学生单独评审池；概念/进行中项目均可投',
+    proto:'❌不需要实物，线上提交',
+    pref:'美学、功能、人机、可持续；产品/家居/小型硬件友好',
+    cost:'学生 75 €/件；专业产品类 350 €/件',
+    w:[12,18,5,21], winText:'12/18 早鸟 → 次年 5/21 终期', basis:'官方', batch:'2027 届',
+    note:'2027 届：早鸟 12/18、延期早鸟 2/19、常规 5/7、终期 5/21；7 月初出结果，11 月巴黎颁奖｜进行中｜2027 届早鸟 12/18、延期早鸟 2/19、常规 5/7、终期 5/21；学生 75 €/件',
+    
+  },
+  {
+    id:'cidea', name:'C-IDEA Design Award', en:'C-IDEA AWARD', short:'C-IDEA',
+    url:'https://cidea-union.com', rank:2.0,
+    level:'境外B+（国际设计教育联盟赛）',
+    body:'C-IDEA 国际设计教育联盟（多国院校网络，颁奖每年换国家）',
+    spec:'是（工业设计等）',
+    track:'【专设学生组】学生与专业分组评审，概念可投',
+    proto:'初评线上；入围终评按学科可寄实物（非强制）',
+    pref:'商业与艺术价值、社会价值、创新表现、主题表达',
+    cost:'学生档低于专业档，两阶段收费（早鸟最省）',
+    w:[9,25,1,31], winText:'9/25 → 次年 1/31（早鸟 11/30）', basis:'官方', batch:'2027 届',
+    note:'2027 届征集 2026/9/25–2027/1/31（早鸟 11/30）；学生设 Grand Award／最佳／金银铜／新星等｜进行中｜2027 届 2026/9/25–2027/1/31（早鸟 11/30）；学生单独评审',
+    
+  },
+  {
+    id:'seoul', name:'Seoul Design Award（首尔设计奖）', en:'SEOUL DESIGN AWARD', short:'首尔',
+    url:'https://www.seouldesignaward.or.kr', rank:3.0,
+    level:'境外A级（韩国首尔市/首尔设计财团，WDO 认可）',
+    body:'首尔设计财团 Seoul Design Foundation',
+    spec:'是（全设计领域）',
+    track:'【专设学生/青年组】Young Designer Award（原 Concept Award）面向全球本硕博，收未实现概念、mock-up',
+    proto:'初评线上；无需实物',
+    pref:'SDGs：健康与和平／平等机会／能源与环境；可持续与社会价值',
+    cost:'免费',
+    w:[3,30,6,30], winText:'3/30 → 6/30', basis:'往年规律', batch:'2027 届',
+    note:'2026：3/30–6/30 报名，7–9 月评审，10/14 颁奖（DDP）；材料须全英文｜2026 已截止｜3/30–6/30；10/14 颁奖；2027 届约 2027/3 开放',
+    
+  },
+  {
+    id:'adesign', name:'A\' Design Award & Competition（含 Young Design Award）', en:'A\' DESIGN AWARD', short:'A′',
+    url:'https://competition.adesignaward.com', rank:2.0,
+    level:'境外B+（意大利，WDO 收录赛事）',
+    body:'A\' Design Award SRL（意大利科莫）／IDC 国际设计俱乐部体系',
+    spec:'是（产品设计等百余类）',
+    track:'【专设青年组】Young（≤25 岁）与 Young Collective；35 岁以下学生/新锐可投概念与已落地项目',
+    proto:'❌不需要实物（线上评审）',
+    pref:'美学、功能、人机、创新、落地潜力；大众焦点小组参与',
+    cost:'免费注册＋免费初评；通过初评后按提名档收费（Young 最低；可用 Design Ambassador 提名券免单）',
+    w:[4,21,2,28], winText:'4/21 → 次年 2/28', basis:'官方', batch:'2026–27 季',
+    note:'2026–2027 报名 4/21–2/28；作品须 10 年内完成；数字/愿景版无强制获奖费｜进行中｜2026–2027 报名 4/21–2027/2/28；Young（≤25）初评免费',
+    
+  },
+  {
+    id:'gmark', name:'GOOD DESIGN NEW HOPE AWARD（日本 G-Mark 新希望奖）', en:'G-MARK NEW HOPE', short:'NEW HOPE',
+    url:'https://newhope.g-mark.org', rank:4.0,
+    level:'境外顶级学生专项（日本设计振兴会）',
+    body:'日本设计振兴会 JDP；2022 年设立，2026 为第 5 届',
+    spec:'是（物/场/情报/机制四类）',
+    track:'【专设学生组】在校生＋刚毕业新人；课题作业、毕设、自主概念均可',
+    proto:'❌不需要实物：线上提交',
+    pref:'社会课题解决、使用本质、可持续；不只看造型',
+    cost:'免费',
+    w:[4,1,8,17], winText:'约 4 月启动 → 8/17 13:00', basis:'往年规律', batch:'第 6 届',
+    note:'2026 截止 8/17 13:00；⚠不要误投 G-Mark 主赛（企业/量产向）；组队≤10 人｜2026 已截止｜截止 2026/8/17 13:00；2027 届约 2027/4–8 月（第 6 届）',
+    
+  },
+  {
+    id:'idawards', name:'International Design Awards（IDA 国际设计奖）', en:'IDA DESIGN AWARDS', short:'IDA',
+    url:'https://www.idesignawards.com', rank:2.5,
+    level:'境外A级（美国 Farmani Group）',
+    body:'Farmani Group（美国洛杉矶）',
+    spec:'是（Product 等五大类）',
+    track:'【专设学生组】学生与专业分开计费，设 Emerging Student 年度头衔；概念可投',
+    proto:'❌不需要实物：最多 10 张图＋1 份 PDF',
+    pref:'创新、用户价值、完成度；产品类学生首件 80 €',
+    cost:'学生首件 80 €（产品类）；加报 60 €；同门类加类别 5 折',
+    w:[4,1,12,31], winText:'4 月启动 → 12 月底（分档）', basis:'待公告', batch:'2027 届',
+    note:'作品须近 5 年完成；获奖后证书/奖杯/出版不额外收费｜进行中｜2027 届产品类学生首件 80 €；常规档以官网当期为准；作品须近 5 年完成',
+    
+  },
+  {
+    id:'london', name:'London Design Awards（伦敦设计奖）', en:'LONDON DESIGN AWARDS', short:'伦敦',
+    url:'https://thelondondesignawards.com', rank:2.0,
+    level:'境外B+（英国，IAA 国际奖项协会主办）',
+    body:'International Awards Associate（IAA，同 MUSE）',
+    spec:'是（产品/建筑/室内/视觉等）',
+    track:'【学生可投·混评】18 岁以上学生可投，无独立学生组、无学生优惠价',
+    proto:'❌不需要实物',
+    pref:'视觉完成度、概念创意、传播价值',
+    cost:'首件 219 $＋每人 30 $ 年度管理费；无学生折扣',
+    w:[7,25,12,4], winText:'7/25 常规 → 12/4 最晚', basis:'官方', batch:'2026 S2',
+    note:'2026 S2：常规 7/25–9/3、终期 9/4–10/8、延长期 10/9–11/6、最晚 11/7–12/4；⚠与 MUSE 同门，学生性价比一般，适合作品集补充｜进行中｜2026 S2 最晚档 11/7–12/4；S1 每年 1–4 月',
+    
+  },
+  {
+    id:'dmp', name:'Design MasterPrize（DMP 设计大师奖）', en:'DESIGN MASTERPRIZE', short:'DMP',
+    url:'https://www.designmasterprize.com', rank:2.0,
+    level:'境外B+（美国，Architecture MasterPrize 姊妹奖）',
+    body:'Farmani Group 体系（AMP 姊妹奖）',
+    spec:'是（Product／Graphic & Communication）',
+    track:'【专设学生档】学生单独价格档；概念可投，18 岁以上可投',
+    proto:'❌不需要实物：1 封面＋9 张图＋可选 A4 PDF',
+    pref:'产品创新、功能、美学、落地潜力',
+    cost:'学生早鸟 50 € 起（常规约 52 € 起）；加类别 7 折',
+    w:[3,31,8,31], winText:'3/31 早鸟 → 8/31 延长期', basis:'官方', batch:'2027 届',
+    note:'2027 届：早鸟 3/31、延期早鸟 5/18、常规 6/30、终期 7/31、延长期 8/31｜进行中｜2027 届早鸟 3/31、延期早鸟 5/18、常规 6/30、终期 7/31、延长期 8/31；学生 50 € 起',
+    
+  },
+  {
+    id:'kokuyo', name:'国誉设计大奖 KOKUYO DESIGN AWARD', en:'KOKUYO DESIGN AWARD', short:'国誉',
+    url:'https://www.kokuyo.com/en/award/', rank:3.0,
+    level:'境外A级（日本国誉主办，产品设计国际赛）',
+    body:'国誉株式会社（大阪）',
+    spec:'是（文具/家具/工具类产品设计）',
+    track:'【学生可投·混评】不设学生组，任何年龄/国籍的个人或团体可投；课题作业与自主概念均可；有 NEW GENERATION 青年表彰',
+    proto:'❌初评线上；终审需以模型＋演示答辩（2027/3/13，东京，线上或线下）',
+    pref:'仅限工作/学习/生活场景的文具、家具、工具；主题解读、社会议题、量产可行性',
+    cost:'免费（要项未列报名费）',
+    w:[7,24,10,7], winText:'7/24 → 10/7', basis:'官方', batch:'2027 届',
+    note:'2027 届主题 dialogue：7/24–10/7 报名；⚠作品须未公开发表（作品集网站/社媒发布即算公开）｜2027 已截止｜报名 2026/7/24–10/7；终审 2027/3/13（东京）；下届 2027/7 开放',
+    
+  },
+  {
+    id:'midtown', name:'TOKYO MIDTOWN AWARD（东京中城奖·设计竞赛）', en:'TOKYO MIDTOWN AWARD', short:'MIDTOWN',
+    url:'https://www.tokyo-midtown.com/jp/award/', rank:3.0,
+    level:'境外A级（日本东京中城主办）',
+    body:'Tokyo Midtown Management（三井不动产系）',
+    spec:'是（设计竞赛：产品/装置/服务提案）',
+    track:'【学生可投·混评】39 岁以下均可；设计竞赛收未发表原创提案',
+    proto:'⚠二次审查须到东京中城现场演示；通过后提交模型/实物（以要项为准）',
+    pref:'年度命题（空间/城市/生活提案）、完成度、可实现性',
+    cost:'免费（差旅自理，海外作者须能赴日）',
+    w:[4,10,5,11], winText:'4/10 → 5/11', basis:'往年规律', batch:'第 20 届',
+    note:'2026 报名 4/10–5/11，二次审查 7/14；⚠不接受他赛双重投稿；纯渲染方案晋级须做模型，风险高｜2026 已截止｜报名 4/10–5/11、二次审查 7/14（须到东京）；下届约 2027/4',
+    mult:'⛔禁双重投稿（章程明载不接受他赛投稿）',
+  },
+  {
+    id:'innodesign', name:'INNODESIGN PRIZE 全球创新设计大奖', en:'INNODESIGN PRIZE', short:'INNODESIGN',
+    url:'https://www.innodesignglobal.com', rank:2.0,
+    level:'境外B（法国起源，现由亚太区组委会运营）',
+    body:'INNODESIGN PRIZE 亚太地区组委会（北京环艺国际展览有限公司运营）',
+    spec:'是（工业/产品设计等）',
+    track:'【学生可投·混评】设学生档；概念方案可投',
+    proto:'❌不需要实物：线上图档',
+    pref:'创新、可持续、材料探索；消费产品概念友好',
+    cost:'学生档低于专业档（以当年公告为准）',
+    w:[4,15,12,31], winText:'4/15 启动 → 12 月底', basis:'待公告', batch:'第 14 届',
+    note:'2026 第十三届 4/15 启动全球征稿；⚠主办为境内运营主体，认定时按“境内运营国际赛”看待｜2026 已截止（4/15 起滚动征稿）；2027 第十四届以官网公告为准',
+    
+  },
+];
+
+const ROLLING = [
+];
+
+/* ── helpers ─────────────────────────────── */
+const MON = ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
+const MTIER = {4:'S', 3:'A', 2.5:'B', 2:'B', 1:'C'};
+const TLBL  = {4:'极高', 3:'高', 2.5:'中高', 2:'中等', 1:'偏低'};
+const LOGO  = id => `assets/emblem/${id}.png`;
+const MONO_FIX = {idsa:'IDEA', youth:'青年', huacan:'华灿奖', cdec:'3C', qingdao:'青岛'};
+const MONO_ONLY = new Set(['huacan','qingdao','huabi','kokuyo']);   // 印章字牌兜底（无可用标识）
+function monoOf(d){
+  if(MONO_FIX[d.id]) return MONO_FIX[d.id];
+  const s = String(d.short || d.name).trim();
+  if(/^[A-Za-z0-9]/.test(s)) return s.replace(/[^A-Za-z0-9]/g, '').slice(0, 3).toUpperCase();
+  return s.slice(0, 2);
+}
+function emblemHTML(d){
+  const n = monoOf(d).length;
+  const size = n >= 4 ? ' xs' : n === 3 ? ' long' : '';
+  if(!MONO_ONLY.has(d.id)){
+    return `<img src="${LOGO(d.id)}" alt="" loading="lazy"
+      onerror="var b=this.parentNode.querySelector('.mono');if(b)b.classList.add('on');this.remove()"><b class="mono${size}">${esc(monoOf(d))}</b>`;
+  }
+  return `<b class="mono on${size}">${esc(monoOf(d))}</b>`;
+}
+
+/* 今天是赛季中的哪一天：月*31+日；跨年窗口展开到 >372 的区间 */
+const NOW = new Date();
+/* 真实日期运算：窗口用 Date 对象，跨年自然顺延，天数按日历精确计算 */
+const TODAY = (() => { const n = new Date(); n.setHours(0,0,0,0); return n; })();
+const DAY = 86400000;
+function winOf(d, y){
+  const s = new Date(y, d.w[0] - 1, d.w[1]);
+  let e = new Date(y, d.w[2] - 1, d.w[3]);
+  if(e < s) e = new Date(y + 1, d.w[2] - 1, d.w[3]);
+  return [s, e];
+}
+function stOf(d){
+  if(d.cycle2) return {k:'cycle', label:`非本年 · 下届 ${d.next || '待定'}`, n:0};
+  if(!d.w) return {k:'roll', label:'全年滚动', n:0};
+  const Y = TODAY.getFullYear();
+  /* 1) 现在是否正落在某个年度的窗口里 */
+  for(const y of [Y - 1, Y, Y + 1]){
+    const [s, e] = winOf(d, y);
+    if(TODAY >= s && TODAY <= e){
+      const n = Math.ceil((e - TODAY) / DAY);
+      return {k:'live', n, label:`征集进行中 · 剩 ${n} 天`};
+    }
+  }
+  /* 2) 否则找最近一次未来的开放日 */
+  let next = null;
+  for(const y of [Y, Y + 1]){
+    const [s] = winOf(d, y);
+    if(s > TODAY && (!next || s < next)) next = s;
+  }
+  if(next){
+    const n = Math.ceil((next - TODAY) / DAY);
+    /* 120 天内要开的才提示“即将开放”，否则仍算已截止，免得全年都挂着倒计时 */
+    if(n <= 120) return {k:'soon', n, label:`${n} 天后开放`};
+  }
+  return {k:'past', n:0, label:'已截止'};
+}
+
+const ALL = DATA.concat(ROLLING);
+ALL.forEach(d => {
+  d.tier = MTIER[d.rank] || 'C';
+  d.tierLabel = TLBL[d.rank] || '中等';
+  d.span = d.w ? daySpan(d.w) : null;
+  d.st = stOf(d);
+});
+const byId = Object.fromEntries(ALL.map(d => [d.id, d]));
+
+function daySpan(w){
+  const [sm,sd,em,ed] = w;
+  const start = sm*31 + sd, end = em*31 + ed;
+  const raw = (end >= start) ? end - start : (end + 372 - start);
+  return Math.round(raw * 30.4/31);
+}
+function activeMonths(w){
+  if(!w) return [];
+  const [sm,,em] = w, out = [];
+  let m = sm, guard = 0;
+  while(guard++ < 12){
+    out.push({m, start:m === sm});
+    if(m === em) break;
+    m = m === 12 ? 1 : m + 1;
+  }
+  return out;
+}
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* ── stats ───────────────────────────────── */
+(function stats(){
+  const total = ALL.length, sched = DATA.length, sTier = ALL.filter(d=>d.tier==='S').length;
+  const free = ALL.filter(d=>/^免费/.test(d.cost)).length;
+  const live = ALL.filter(d=>d.st.k==='live').length;
+  const proto = ALL.filter(d=>/需要样机|需要完整功能样机|需要原型|需样机/.test(d.proto)).length;
+  const items = [
+    [total,'项赛事',''], [live,'项正在征集','live'], [sTier,'项顶级含金量','gold'],
+    [free,'项免报名费',''], [proto,'项复评需实物','']
+  ];
+  document.getElementById('stats').innerHTML = items.map(([n,l,c]) =>
+    `<div class="stat ${c}"><b>${n}</b><span>${l}</span></div>`).join('');
+  document.getElementById('nTop').textContent = total;
+})();
+
+/* ── 此刻可投 ───────────────────────────── */
+(function nowBox(){
+  const box = document.getElementById('heroNow');
+  const list = document.getElementById('hnList');
+  if(!box || window.matchMedia('(max-width:1180px)').matches) return;
+  let pool = ALL.filter(d => !d.cycle2 && d.st.k === 'live').sort((a,b) => a.st.n - b.st.n);
+  let tail = false;
+  if(!pool.length){
+    pool = ALL.filter(d => d.st.k === 'soon').sort((a,b) => a.st.n - b.st.n).slice(0,4);
+    tail = true;
+  }
+  pool = pool.slice(0,4);
+  if(!pool.length) return;
+  document.getElementById('hnDay').textContent = `${NOW.getMonth()+1}/${NOW.getDate()}`;
+  list.innerHTML = pool.map(d => `<button class="hn-item" data-go="${d.id}">
+      <u class="hn-t" data-tier="${d.tier}"${!tail && d.st.n < 30 ? ' data-urgent="1"' : ''}></u><b>${esc(d.short)}</b><i${!tail && d.st.n < 30 ? ' data-urgent="1"' : ''}>${tail ? '开' + d.st.n + 'd' : '剩 ' + d.st.n + 'd'}</i></button>`).join('');
+  list.addEventListener('click', e => {
+    const b = e.target.closest('[data-go]'); if(!b) return;
+    const card = document.getElementById('ev-' + b.dataset.go); if(!card) return;
+    card.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+  box.hidden = false;
+})();
+
+/* ── season wall ─────────────────────────── */
+(function wall(){
+  const el = document.getElementById('wall');
+  const now = new Date().getMonth() + 1;
+  let html = '';
+  for(let m = 1; m <= 12; m++){
+    const list = ALL.filter(d => !d.cycle2 && d.w && activeMonths(d.w).some(a => a.m === m))
+      .sort((a,b) => {
+        const sa = a.w[0] === m ? a.w[1] : 99, sb = b.w[0] === m ? b.w[1] : 99;
+        return sa - sb || b.rank - a.rank;
+      });
+    html += `<div class="col">
+      <div class="col-head"><b>${String(m).padStart(2,'0')}</b>
+        ${m === now ? '<span class="now">本月</span>' : `<span>${MON[m-1]}</span>`}
+      </div>
+      <div class="col-body">${list.map(d => {
+        const started = d.w[0] === m;
+        return `<button class="gchip ${started ? '' : 'cont'}" data-tier="${d.tier}" data-go="${d.id}"
+          title="${esc(d.name)} · ${esc(d.winText)}"><span class="gd"></span>${esc(d.short)}</button>`;
+      }).join('')}</div>
+    </div>`;
+  }
+  el.innerHTML = html;
+  el.addEventListener('click', e => {
+    const b = e.target.closest('[data-go]');
+    if(!b) return;
+    const card = document.getElementById('ev-' + b.dataset.go);
+    if(!card) return;
+    card.scrollIntoView({behavior:'smooth', block:'center'});
+    card.querySelector('.ev-card').classList.remove('flash');
+    void card.querySelector('.ev-card').offsetWidth;
+    card.querySelector('.ev-card').classList.add('flash');
+  });
+
+  /* 折叠控制：默认收起，记忆上次状态 */
+  const box = document.getElementById('wallBox');
+  const btn = document.getElementById('wallToggle');
+  const hint = document.getElementById('wallHint');
+  let open = new URLSearchParams(location.search).get('wall') === '1';
+  if(!open){ try{ open = localStorage.getItem('wallOpen') === '1'; }catch(e){} }
+  function paint(){
+    box.classList.toggle('expanded', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    hint.textContent = open ? '收起' : `展开 · ${ALL.filter(d=>!d.cycle2).length} 项`;
+  }
+  paint();
+  btn.addEventListener('click', () => {
+    open = !open; paint();
+    try{ localStorage.setItem('wallOpen', open ? '1' : '0'); }catch(e){}
+    if(open) box.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+})();
+
+/* ── card markup ─────────────────────────── */
+function cardHTML(d){
+  const tchip = [];
+  const costTxt = String(d.cost).replace(/[；;].*/,'').slice(0,24);
+  const isFree = /^免费|免费/.test(costTxt) && !/需报名费|需投稿费|标准|美元|欧元|港元|元\/件|收费/.test(costTxt);
+  tchip.push(`<span class="tchip cost ${isFree ? 'free' : 'paid'}"><i></i>${costTxt}</span>`);
+  if(/不需要/.test(d.proto)) tchip.push(`<span class="tchip">免实物</span>`);
+  else tchip.push(`<span class="tchip proto">${d.proto.split(/[（(·；;]/)[0].slice(0,10)}</span>`);
+  tchip.push(`<span class="tchip">${esc(d.short)}</span>`);
+
+  const shortWin = d.span !== null && d.span <= 32;
+  return `<article class="ev" id="ev-${d.id}" data-tier="${d.tier}" data-st="${d.st.k}" data-id="${d.id}"${d.st.k === 'live' && d.st.n < 30 ? ' data-urgent="1"' : ''}>
+    <span class="node"></span>
+    <a class="ev-card" href="${d.link ? '#' : d.url}" ${d.link ? '' : 'target="_blank" rel="noopener noreferrer"'}
+       ${d.link ? `data-link="${d.link}"${d.qr ? ` data-qr="${d.qr}"` : ''}` : ''}
+       aria-label="${esc(d.name)}，${esc(d.winText)}，${d.link === 'qr' ? '点击查看官方微信公众号' : d.link === 'note' ? '暂无官网' : '点击打开官网'}">
+      <div class="emblem">${emblemHTML(d)}</div>
+      <div class="ev-main">
+        <div class="ev-name">${esc(d.name)}
+          ${d.tier === 'S' ? '<span class="pill gold">TOP</span>' : ''}
+          ${shortWin ? '<span class="pill alert">窗口极短</span>' : ''}
+          ${d.cycle2 ? `<span class="pill cyc">两年一届</span>` : ''}
+          <span class="en">${esc(d.en)}</span>
+        </div>
+        <div class="ev-sub"><span>${esc(d.level)}</span><i>/</i><span>${esc(d.batch)}</span></div>
+        <div class="ev-chips">${tchip.join('')}
+          <span class="tchip pref">偏好：${esc(d.pref.split('；')[0])}</span></div>
+      </div>
+      <div class="ev-side">
+        <span class="st st-${d.st.k}"><i></i>${esc(d.st.label)}</span>
+        <div class="ev-date">${String(d.winText).split(' → ').map(esc).join('<span> → </span>')}</div>
+        <div class="meter"><span class="meter-label">含金量 ${d.tierLabel}</span>
+          <span class="meter-track"><span class="meter-fill" style="width:${d.rank/4*100}%"></span></span></div>
+        ${d.link === 'qr' ? '<span class="basis linkhint">扫码报名</span>' : d.link === 'note' ? '<span class="basis linkhint">暂无官网</span>' : ''}
+        <span class="basis" data-b="${d.basis}">${d.basis}</span>
+      </div>
+    </a>
+    <button class="ev-info" data-toggle="${d.id}" aria-label="展开详情">i</button>
+    <div class="ev-detail">
+      <div class="d-head">
+        <div class="d-tag">${emblemHTML(d)}</div>
+        <div class="d-titles"><b>${esc(d.name)}</b><span>${esc(d.level)}</span></div>
+        ${d.link === 'qr'
+          ? `<button class="d-go" data-qr="${d.qr}" data-name="${esc(d.name)}">公众号二维码</button>`
+          : d.link === 'note'
+            ? `<button class="d-go" data-note="${esc(d.noteHint || '该赛事暂无独立官网，报名入口以主办方公众号/主管部门通知为准。')}">暂无官网</button>`
+            : `<a class="d-go" href="${d.url}" target="_blank" rel="noopener noreferrer">官网报名 ↗</a>`}
+      </div>
+      ${d.mult ? `<div class="d-banned"><b>⚠ 禁止一稿多投</b><span>${esc(d.mult.replace(/^⛔\s*/, ''))}</span></div>` : ''}
+      <div class="d-grid">
+        <div class="d-item"><div class="d-k">征稿窗口</div><div class="d-v">${esc(d.winText)}</div></div>
+        <div class="d-item"><div class="d-k">参赛成本</div><div class="d-v cost">${esc(d.cost)}</div></div>
+        <div class="d-item"><div class="d-k">含金量 · 届次</div><div class="d-v">${esc(d.tierLabel)} · ${esc(d.batch)}</div></div>
+        <div class="d-item"><div class="d-k">复评实物</div><div class="d-v">${esc(d.proto)}</div></div>
+        <div class="d-item wide"><div class="d-k">评审偏好 · 适配选题</div><div class="d-v">${esc(d.pref)}</div></div>
+        <div class="d-item wide"><div class="d-k">主办 / 背书</div><div class="d-v">${esc(d.body)}</div></div>
+        <div class="d-item wide"><div class="d-k">学生概念赛道</div><div class="d-v">${esc(d.track)}</div></div>
+        <div class="d-item wide"><div class="d-k">时间依据 · 坑点</div><div class="d-v">${esc(d.note)}</div></div>
+      </div>
+    </div>
+  </article>`;
+}
+
+/* ── timeline render ─────────────────────── */
+(function timeline(){
+  const tl = document.getElementById('tl');
+  let html = '', idx = 0;
+  for(let m = 1; m <= 12; m++){
+    const list = DATA.filter(d => !d.cycle2 && d.w[0] === m).sort((a,b) => a.w[1] - b.w[1] || b.rank - a.rank);
+    if(!list.length) continue;
+    html += `<section class="month-block" id="m-${m}" data-m="${m}">
+      <div class="month-head">
+        <span class="mnum">${String(m).padStart(2,'0')}</span>
+        <span class="mname">${MON[m-1]}</span>
+        <span class="mcount">${list.length} 项开放</span>
+        <span class="mline"></span>
+      </div>
+      ${list.map(d => { const s = `style="transition-delay:${Math.min(idx++, 8)*45}ms"`; return cardHTML(d).replace('<article class="ev"', `<article class="ev" ${s}`); }).join('')}
+    </section>`;
+  }
+  tl.innerHTML += html;
+
+  const cyc = ALL.filter(d => d.cycle2).sort((a,b) => a.w[0] - b.w[0]);
+  const bi = document.getElementById('biennial');
+  if(bi && cyc.length){
+    bi.innerHTML = `<div class="month-block">
+        <div class="month-head">
+          <span class="mnum">2Y</span>
+          <span class="mname">两年一届 · 非本年档期</span>
+          <span class="mcount">${cyc.length} 项</span>
+          <span class="mline"></span>
+        </div>
+        <p class="roll-note">这几项<strong>隔年办</strong>：本年度没有征集，窗口已按上一届月份标注，仅作提前备稿参考。点开卡片可以看到下届年份与官方口径。</p>
+        <div class="roll-grid">${cyc.map(d => cardHTML(d)).join('')}</div>
+      </div>`;
+  }
+  const roll = document.getElementById('rolling');
+  if(!ROLLING.length){ roll.remove(); }
+  else roll.innerHTML = `<div class="month-block">
+      <div class="month-head">
+        <span class="mnum">∞</span>
+        <span class="mname">全年滚动</span>
+        <span class="mcount">${ROLLING.length} 项</span>
+        <span class="mline"></span>
+      </div>
+      <p class="roll-note">这两项<strong>没有固定截稿日</strong>：全年级别征集、以官网当期公告为准，所以不占月份档期，单列在最后。想投随时可投，滚动提交即可。</p>
+      <div class="roll-grid">${ROLLING.map(d => cardHTML(d)).join('')}</div>
+    </div>`;
+})();
+
+/* ── reveal + progress + month nav ───────── */
+const evs = [...document.querySelectorAll('.ev')];
+const io = new IntersectionObserver(es => {
+  es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {rootMargin:'0px 0px -6% 0px', threshold:.05});
+evs.forEach(el => io.observe(el));
+
+const railFill = document.getElementById('railFill');
+/* 进度条渐变按整条时间轴高度铺开，滚到哪都是稳定色相 */
+function syncRailLen(){
+  const tl = document.getElementById('tl');
+  if(tl) document.documentElement.style.setProperty('--tl-h', tl.offsetHeight + 'px');
+}
+syncRailLen();
+window.addEventListener('resize', syncRailLen);
+
+const totop = document.getElementById('totop');
+let raf = false;
+let tlTop = 0, tlH = 1, blockMarks = [], activeM = null;
+
+/* 只在载入 / 尺寸变化 / 筛选后重算一次位置表，滚动时纯数值比较 */
+function measure(){
+  const tl = document.getElementById('tl');
+  const r = tl.getBoundingClientRect();
+  tlTop = r.top + window.scrollY; tlH = r.height || 1;
+  blockMarks = [...document.querySelectorAll('.month-block[data-m]')].map(b => {
+    const bb = b.getBoundingClientRect();
+    return { m: b.dataset.m, top: bb.top + window.scrollY, bottom: bb.bottom + window.scrollY, el: b };
+  });
+}
+function onScroll(){
+  if(raf) return; raf = true;
+  requestAnimationFrame(() => {
+    const sy = window.scrollY, vh = window.innerHeight;
+    railFill.style.height = Math.min(Math.max(vh * .55 - (tlTop - sy), 0), tlH) + 'px';
+    totop.classList.toggle('show', sy > 600);
+
+    let cur = null;
+    for(const b of blockMarks){
+      if(b.top - sy <= vh * .42 && b.bottom - sy > vh * .3){ cur = b.m; break; }
+    }
+    if(cur !== activeM){
+      if(activeM){
+        const p = blockMarks.find(x => x.m === activeM);
+        if(p) p.el.classList.remove('is-active');
+      }
+      if(cur){
+        const n = blockMarks.find(x => x.m === cur);
+        if(n) n.el.classList.add('is-active');
+      }
+      document.querySelectorAll('#mnav button').forEach(n => n.classList.toggle('on', n.dataset.m === cur));
+      activeM = cur;
+    }
+    raf = false;
+  });
+}
+measure();
+addEventListener('scroll', onScroll, {passive:true});
+addEventListener('resize', () => { measure(); onScroll(); });
+
+(function mnav(){
+  const nav = document.getElementById('mnav');
+  nav.innerHTML = [1,2,3,4,5,6,7,8,9,10,11,12].map(m =>
+    `<button data-m="${m}"><span>${String(m).padStart(2,'0')}</span><i></i></button>`).join('');
+  nav.addEventListener('click', e => {
+    const b = e.target.closest('button'); if(!b) return;
+    const el = document.getElementById('m-' + b.dataset.m);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+})();
+
+totop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+/* ── hover flip ──────────────────────────── */
+document.querySelectorAll('.ev').forEach(ev => {
+  ev.addEventListener('mouseenter', () => {
+    const rect = ev.getBoundingClientRect();
+    const panel = ev.querySelector('.ev-detail');
+    if(!panel) return;
+    const ph = panel.offsetHeight + 24;
+    ev.dataset.flip = (rect.bottom + ph > window.innerHeight - 10 && rect.top > ph) ? 'up' : 'down';
+  });
+});
+
+/* ── mobile detail toggle ────────────────── */
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-toggle]');
+  if(!t) return;
+  e.preventDefault(); e.stopPropagation();
+  const ev = t.closest('.ev');
+  ev.classList.toggle('open');
+});
+
+/* ── filters ─────────────────────────────── */
+const FILTERS = [
+  {k:'all',   label:'全部'},
+  {k:'live',  label:'正在征集',   test:d => d.st.k === 'live'},
+  {k:'soon',  label:'即将开放',   test:d => d.st.k === 'soon' && d.st.n <= 60},
+  {k:'s',     label:'顶级含金量', test:d => d.tier === 'S'},
+  {k:'wl',    label:'白名单A类',  test:d => /白名单/.test(d.level)},
+  {k:'intl',  label:'境外赛事',   test:d => /境外/.test(d.level)},
+  {k:'free',  label:'免报名费',   test:d => /^免费/.test(d.cost)},
+  {k:'paid',  label:'需付费',     test:d => paidOf(d)},
+  {k:'auto',  label:'汽车设计',   test:d => has(d,'auto')},
+  {k:'local', label:'地方杯',     test:d => has(d,'local')},
+  {k:'cycle2',label:'两年一届',   test:d => !!d.cycle2},
+  {k:'proto', label:'需实物/样机', test:d => !/不需要/.test(d.proto)}
+];
+const has = (d,t) => (d.tags || []).includes(t);
+function paidOf(d){
+  const c = String(d.cost).replace(/[；;].*/,'');
+  return /需报名费|需投稿费|标准|美元|欧元|港元|元\/件|收费|€|\$/.test(c) || !/^免费|免费/.test(c);
+}
+let active = 'all', query = '';
+
+(function chips(){
+  const box = document.getElementById('filters');
+  box.innerHTML = FILTERS.map(f => {
+    const n = f.k === 'all' ? ALL.length : ALL.filter(f.test).length;
+    return `<button class="fchip" data-k="${f.k}" aria-pressed="${f.k===active}">${f.label}<span class="n">${n}</span></button>`;
+  }).join('');
+  box.addEventListener('click', e => {
+    const b = e.target.closest('.fchip'); if(!b) return;
+    active = b.dataset.k;
+    box.querySelectorAll('.fchip').forEach(x => x.setAttribute('aria-pressed', x.dataset.k === active));
+    apply();
+  });
+})();
+
+document.getElementById('q').addEventListener('input', e => { query = e.target.value.trim().toLowerCase(); apply(); });
+
+function apply(){
+  const f = FILTERS.find(x => x.k === active);
+  let shown = 0;
+  document.querySelectorAll('.ev').forEach(el => {
+    const d = byId[el.dataset.id];
+    const okF = active === 'all' || f.test(d);
+    const hay = (d.name + d.en + d.short + d.pref + d.level + d.cost + d.body + d.note).toLowerCase();
+    const okQ = !query || hay.includes(query);
+    const vis = okF && okQ;
+    el.classList.toggle('is-hidden', !vis);
+    if(vis) shown++;
+  });
+  document.querySelectorAll('.month-block[data-m]').forEach(b => {
+    const any = [...b.querySelectorAll('.ev')].some(e => !e.classList.contains('is-hidden'));
+    b.style.display = any ? '' : 'none';
+  });
+  document.querySelectorAll('.month-block:not([data-m])').forEach(b => {
+    const any = [...b.querySelectorAll('.ev')].some(e => !e.classList.contains('is-hidden'));
+    b.style.display = any ? '' : 'none';
+  });
+  document.querySelectorAll('.gchip').forEach(g => {
+    const d = byId[g.dataset.go];
+    const okF = active === 'all' || f.test(d);
+    const hay = (d.name + d.en + d.short + d.pref).toLowerCase();
+    const okQ = !query || hay.includes(query);
+    g.classList.toggle('is-off', !(okF && okQ));
+  });
+  document.getElementById('count').textContent = `显示 ${shown} / ${ALL.length}`;
+  syncRailLen();
+  measure();
+  onScroll();
+}
+apply();
+measure();
+onScroll();
+
+/* 二维码弹窗 + 轻提示 */
+(function qrAndToast(){
+  const mask = document.getElementById('qrMask');
+  const img = document.getElementById('qrImg');
+  const nameEl = document.getElementById('qrName');
+  const toast = document.getElementById('toast');
+  let tTimer = null;
+  window.showQR = (src, name) => {
+    img.src = src; nameEl.textContent = name || '官方微信公众号';
+    mask.classList.add('on');
+  };
+  window.showToast = msg => {
+    toast.textContent = msg; toast.classList.add('on');
+    clearTimeout(tTimer); tTimer = setTimeout(() => toast.classList.remove('on'), 4200);
+  };
+  mask.addEventListener('click', e => { if(e.target === mask) mask.classList.remove('on'); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') mask.classList.remove('on'); });
+
+  document.addEventListener('click', e => {
+    const qr = e.target.closest('[data-qr]');
+    if(qr){
+      e.preventDefault(); e.stopPropagation();
+      const card = qr.closest('.ev');
+      const nm = qr.dataset.name || (card && byId[card.dataset.id] ? byId[card.dataset.id].name : '');
+      window.showQR(qr.dataset.qr, nm);
+      return;
+    }
+    const note = e.target.closest('[data-note]');
+    if(note){
+      e.preventDefault(); e.stopPropagation();
+      window.showToast(note.dataset.note);
+      return;
+    }
+    const linkNote = e.target.closest('.ev-card[data-link="note"]');
+    if(linkNote){ e.preventDefault(); window.showToast('该赛事暂无独立官网，报名入口以主办方公众号 / 主管部门通知为准。'); }
+  }, true);
+})();
+
+/* 深链：#ev-<id> 或 ?open=<id> 直接展开该赛事详情 */
+(function deepLink(){
+  const q = new URLSearchParams(location.search);
+  const m = location.hash.match(/^#ev-([a-z0-9_]+)$/);
+  const id = q.get('open') || (m && m[1]);
+  if(!id) return;
+  const card = document.getElementById('ev-' + id);
+  if(!card) return;
+  card.classList.add('open', 'in');
+  card.querySelector('.ev-card').classList.add('flash');
+  setTimeout(() => card.scrollIntoView({block:'center'}), 60);
+;
+  window.addEventListener('load', () => { measure(); onScroll(); });
+})();
+/* ── 官方核对状态（status.json，由 GitHub Actions 每月生成）──── */
+(async function statusLayer(){
+  const bar  = document.getElementById('statusBar');
+  const note = document.getElementById('statusNote');
+  const fmt  = iso => iso ? iso.slice(0,10) : '';
+  const dayDiff = iso => Math.round((Date.now() - new Date(iso).getTime())/86400000);
+
+  let st = null;
+  try{
+    const r = await fetch('status.json', {cache:'no-store'});
+    if(r.ok) st = await r.json();
+  }catch(e){ /* file:// 或被拦 */ }
+
+  if(!st){
+    if(bar){
+      bar.hidden = false;
+      bar.innerHTML = '<span class="dot"></span><span>本地直接打开：浏览器不允许读取 <b>status.json</b>，卡片仅显示时间推算，未叠加官网核对结果。</span>';
+    }
+    if(note) note.textContent = '官网核对：未联网核对（部署到 GitHub Pages 或起本地服务器后自动生效）。';
+    return;
+  }
+
+  const gen = st.generatedAt || '';
+  const age = gen ? dayDiff(gen) : null;
+  const c = st.counts || {};
+  const pending = (st.changed || []).length;
+  const dead = (st.dead || []).length;
+
+  if(bar){
+    bar.hidden = false;
+    const cls = dead ? 'bad' : (age !== null && age > 300 ? 'old' : '');
+    bar.className = 'sbar ' + cls;
+    const blocked = (c.blocked || 0), unreach = (c.unreachable || 0), okn = (c.ok || 0);
+    let msg = '<span class="dot"></span><span>官网核对 <b>' + fmt(gen).replace(/-/g,'/') + '</b>';
+    if(age !== null) msg += '（' + age + ' 天前）';
+    if(pending) msg += ' · <b>' + pending + '</b> 项官方页面有改动待复核';
+    if(dead)    msg += ' · <b>' + dead + '</b> 项链接失效';
+    if(unreach) msg += ' · ' + unreach + ' 项暂时连不上（证书/超时）';
+    if(blocked) msg += ' · ' + blocked + ' 项被反爬拦截、未参与比对';
+    if(!pending && !dead && !unreach && !blocked) msg += ' · 链接全部可达';
+    if(age !== null && age > 300) msg += ' · <b>本版数据已超过 10 个月未更新，请以官网为准</b>';
+    msg += '</span>';
+    bar.innerHTML = msg;
+  }
+  if(note){
+    note.textContent = '官网核对：' + fmt(gen) + ' 由 GitHub Actions 自动巡检，仅供存活与变更参考；'
+                     + '日期口径仍以本表人工核验结果为准。';
+  }
+
+  Object.keys(st.items || {}).forEach(function(id){
+    const ev = document.getElementById('ev-' + id);
+    if(!ev) return;
+    const rec = st.items[id] || {};
+    const side = ev.querySelector('.ev-side');
+    if(!side) return;
+    const stt = rec.state;
+    const isDead = stt === 'dead', isChg = stt === 'changed';
+    const isUnr = stt === 'unreachable', isBlk = stt === 'blocked';
+    const el = document.createElement('span');
+    el.className = 'chk ' + (isDead ? 'bad' : (isChg || isUnr) ? 'warn' : isBlk ? 'mute' : 'good');
+    const tag = isDead ? '✕ 失效' : isChg ? '⚠ 待复核' : isUnr ? '⚠ 连不上' : isBlk ? '· 未比对' : '✓';
+    el.textContent = tag + (isBlk ? '' : ' ' + (fmt(rec.checkedAt).slice(5).replace('-','/') || ''));
+    const tip = [];
+    if(rec.http) tip.push('HTTP ' + rec.http);
+    if(rec.newYears && rec.newYears.length) tip.push('出现 ' + rec.newYears.join('、'));
+    if(rec.moved) tip.push('已跳转到 ' + (rec.finalUrl || '新域名'));
+    if(rec.error) tip.push(rec.error);
+    el.title = (isDead ? '链接失效（4xx/5xx）' : isChg ? '官方页面日期口径有变更，需人工复核'
+             : isUnr ? '当前无法访问（证书错误 / 超时 / DNS）' : isBlk ? '被反爬或跳转登录页拦截，内容未参与比对'
+             : '链接可达且日期口径未变')
+             + (tip.length ? ' · ' + tip.join(' · ') : '') + (rec.url ? '\n' + rec.url : '');
+    side.appendChild(el);
+  });
+})();
+
+</script>
+</body>
+</html>

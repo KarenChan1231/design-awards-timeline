@@ -1,0 +1,1003 @@
+{
+ "changed": [],
+ "counts": {
+  "baseline": 58,
+  "blocked": 15,
+  "changed": 0,
+  "dead": 0,
+  "ok": 41,
+  "unreachable": 2
+ },
+ "dead": [],
+ "generatedAt": "2026-11-24T08:35:30Z",
+ "items": {
+  "adesign": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:35:12Z",
+   "finalUrl": "https://competition.adesignaward.com/",
+   "fp": "2eb98bcd04e91240",
+   "http": 200,
+   "name": "A\\",
+   "ndates": 0,
+   "size": 10951,
+   "state": "ok",
+   "url": "https://competition.adesignaward.com",
+   "years": []
+  },
+  "adp": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:26Z",
+   "finalUrl": "https://asiadesignprize.com/",
+   "fp": "3db68874b8d1bfdb",
+   "http": 200,
+   "name": "Asia Design Prize 亚洲设计奖",
+   "ndates": 0,
+   "size": 12415,
+   "state": "ok",
+   "url": "https://asiadesignprize.com",
+   "years": [
+    "2009",
+    "2013",
+    "2021",
+    "2025",
+    "2026",
+    "2027"
+   ]
+  },
+  "adyoung": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:33:53Z",
+   "finalUrl": "https://www.ad-young.com/",
+   "fp": "16b0d0648c8316f3",
+   "http": 200,
+   "name": "时报金犊奖",
+   "ndates": 1,
+   "size": 2948,
+   "state": "ok",
+   "url": "http://www.ad-young.com",
+   "years": [
+    "2019",
+    "2024",
+    "2025"
+   ]
+  },
+  "avada": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:02Z",
+   "finalUrl": "https://www.asia-design-week.com/",
+   "fp": "52561a1d93cd5a55",
+   "http": 200,
+   "name": "亚洲新锐艺术与设计大奖 AVADA",
+   "ndates": 0,
+   "size": 2538,
+   "state": "ok",
+   "url": "https://www.asia-design-week.com",
+   "years": [
+    "2025",
+    "2026",
+    "2030"
+   ]
+  },
+  "bda": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:20Z",
+   "finalUrl": "https://www.bdaward.com/",
+   "fp": "8018c3ccee0ae503",
+   "http": 200,
+   "name": "「越来越好」国际设计大赛",
+   "ndates": 8,
+   "size": 2818,
+   "state": "ok",
+   "url": "https://www.bdaward.com",
+   "years": [
+    "2004",
+    "2006",
+    "2008",
+    "2009",
+    "2010",
+    "2015",
+    "2017",
+    "2019",
+    "2024",
+    "2026"
+   ]
+  },
+  "byd": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:35:01Z",
+   "finalUrl": "https://www.byd.com/cn",
+   "fp": "8d83929d60a99288",
+   "http": 200,
+   "name": "比亚迪全球汽车设计大赛",
+   "ndates": 0,
+   "size": 3602,
+   "state": "ok",
+   "url": "https://www.byd.com",
+   "years": [
+    "2027"
+   ]
+  },
+  "cdec": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:19Z",
+   "finalUrl": "https://www.cdec.org.cn/",
+   "fp": "63be6b8e023ab91f",
+   "http": 200,
+   "name": "中国好创意暨全国数字艺术设计大赛",
+   "ndates": 6,
+   "size": 3588,
+   "state": "ok",
+   "url": "https://www.cdec.org.cn",
+   "years": [
+    "2006",
+    "2021",
+    "2026",
+    "2027"
+   ]
+  },
+  "chery": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:35:04Z",
+   "finalUrl": "https://www.xiaohongshu.com/login?redirectPath=http%3A%2F%2Fwww.xiaohongshu.com%2Fuser%2Fprofile%2F67d85c15000000000d00883e%3Fxsec_token%3DYBDPhbJ4t8kb6JSXNDDRm3oFXcRzjy5oEMVzbcb3lQ4BU%3D%26xsec_source%3Dapp_share%26share_id%3D047bf9ce25574e42ae34a577c81580a8%26track_code%3D3MWZQb15Hng%26exSource%3Dnull",
+   "http": 200,
+   "moved": true,
+   "name": "奇瑞全球设计大赛（CADA）",
+   "ndates": 0,
+   "size": 16,
+   "state": "blocked",
+   "url": "https://xhslink.cn/o/3IQJ5e3G7YJ",
+   "years": []
+  },
+  "cidea": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:35:08Z",
+   "finalUrl": "https://cidea-union.com/",
+   "fp": "55c7e95aebf2636f",
+   "http": 200,
+   "name": "C-IDEA Design Award",
+   "ndates": 0,
+   "size": 2315,
+   "state": "ok",
+   "url": "https://cidea-union.com",
+   "years": [
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026",
+    "2027"
+   ]
+  },
+  "cmit": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:40Z",
+   "finalUrl": "https://www.cmit.cn/",
+   "fp": "8d942abc646dc273",
+   "http": 200,
+   "name": "全国大学生数字媒体科技作品及创意设计竞赛（数媒竞赛）",
+   "ndates": 3,
+   "size": 2400,
+   "state": "ok",
+   "url": "https://www.cmit.cn",
+   "years": [
+    "2023",
+    "2025",
+    "2026"
+   ]
+  },
+  "cndesigners": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:16Z",
+   "finalUrl": "https://www.cndesigners.com/",
+   "fp": "1e5de81cd9193b8f",
+   "http": 200,
+   "name": "当代艺术设计作品大赛",
+   "ndates": 0,
+   "size": 5056,
+   "state": "ok",
+   "url": "https://www.cndesigners.com",
+   "years": [
+    "2006",
+    "2021",
+    "2022",
+    "2025"
+   ]
+  },
+  "core77": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:38Z",
+   "finalUrl": "https://designawards.core77.com/",
+   "fp": "0c963216d01bc565",
+   "http": 200,
+   "name": "Core77 Design Awards",
+   "ndates": 0,
+   "size": 8356,
+   "state": "ok",
+   "url": "https://designawards.core77.com/",
+   "years": [
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+   ]
+  },
+  "cuidc": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:10Z",
+   "finalUrl": "https://www.cuidc.net/",
+   "http": 200,
+   "name": "全国大学生工业设计大赛",
+   "ndates": 0,
+   "size": 121,
+   "state": "blocked",
+   "url": "https://www.cuidc.net",
+   "years": []
+  },
+  "d3ds": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:08Z",
+   "finalUrl": "https://3dds.3ddl.net/",
+   "fp": "8687d26f09bd86ab",
+   "http": 200,
+   "name": "全国三维数字化创新设计大赛",
+   "ndates": 5,
+   "size": 4046,
+   "state": "ok",
+   "url": "https://3dds.3ddl.net",
+   "years": [
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2025",
+    "2026"
+   ]
+  },
+  "dia": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:00Z",
+   "finalUrl": "https://www.di-award.org/zh",
+   "fp": "8a5d24c124910152",
+   "http": 200,
+   "name": "DIA 中国设计智造大奖",
+   "ndates": 1,
+   "size": 3150,
+   "state": "ok",
+   "url": "https://www.di-award.org",
+   "years": [
+    "2015",
+    "2017",
+    "2026"
+   ]
+  },
+  "did": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:14Z",
+   "finalUrl": "https://did.gd-id.com/",
+   "fp": "67dac8c9caf1cfd4",
+   "http": 200,
+   "name": "东莞杯 DiD Award 国际工业设计大赛",
+   "ndates": 5,
+   "size": 2113,
+   "state": "ok",
+   "url": "https://did.gd-id.com",
+   "years": [
+    "2026"
+   ]
+  },
+  "dmp": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:35:21Z",
+   "finalUrl": "https://www.designmasterprize.com/",
+   "fp": "f41c8845adedde18",
+   "http": 200,
+   "name": "Design MasterPrize（DMP 设计大师奖）",
+   "ndates": 0,
+   "size": 3150,
+   "state": "ok",
+   "url": "https://www.designmasterprize.com",
+   "years": [
+    "2026"
+   ]
+  },
+  "dnaparis": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:35:05Z",
+   "finalUrl": "https://dna.paris/",
+   "fp": "3119e73918c2e125",
+   "http": 200,
+   "name": "DNA Paris Design Awards（巴黎 DNA 设计奖）",
+   "ndates": 0,
+   "size": 3788,
+   "state": "ok",
+   "url": "https://dna.paris",
+   "years": [
+    "2019",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026",
+    "2027"
+   ]
+  },
+  "dongfeng": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:35:02Z",
+   "finalUrl": "https://www.dfmc.com.cn/news/company/news_20260324_0941.html",
+   "fp": "14f01b7618d631aa",
+   "http": 200,
+   "name": "“东风梦想车”国际青年汽车创意设计大赛",
+   "ndates": 2,
+   "size": 1788,
+   "state": "ok",
+   "url": "https://www.dfmc.com.cn/news/company/news_20260324_0941.html",
+   "years": [
+    "2000",
+    "2003",
+    "2010",
+    "2018",
+    "2023",
+    "2026"
+   ]
+  },
+  "dyson": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:33:57Z",
+   "finalUrl": "https://www.jamesdysonaward.org/",
+   "fp": "af400a6c65cf949a",
+   "http": 200,
+   "name": "James Dyson Award",
+   "ndates": 0,
+   "size": 4016,
+   "state": "ok",
+   "url": "https://www.jamesdysonaward.org",
+   "years": [
+    "2025",
+    "2026",
+    "2027"
+   ]
+  },
+  "epda": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:33Z",
+   "finalUrl": "https://www.productdesignaward.eu/",
+   "fp": "655171079f527490",
+   "http": 200,
+   "name": "European Product Design Award",
+   "ndates": 0,
+   "size": 16016,
+   "state": "ok",
+   "url": "https://www.productdesignaward.eu",
+   "years": [
+    "2025",
+    "2026",
+    "2027"
+   ]
+  },
+  "foshan": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:42Z",
+   "finalUrl": "https://www.foshanid.cn/",
+   "fp": "8f8449f52e9a68f8",
+   "http": 200,
+   "name": "佛山“市长杯”工业设计大赛",
+   "ndates": 6,
+   "size": 1528,
+   "state": "ok",
+   "url": "https://www.foshanid.cn",
+   "years": [
+    "2001",
+    "2017",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2026"
+   ]
+  },
+  "gida": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:12Z",
+   "finalUrl": "https://www.goldreedaward.com/",
+   "fp": "46f28314427dc5c6",
+   "http": 200,
+   "name": "金芦苇工业设计奖",
+   "ndates": 11,
+   "size": 1610,
+   "state": "ok",
+   "url": "https://www.goldreedaward.com",
+   "years": [
+    "2000",
+    "2019",
+    "2020",
+    "2021",
+    "2025",
+    "2026"
+   ]
+  },
+  "gmark": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:35:14Z",
+   "finalUrl": "https://newhope.g-mark.org/",
+   "fp": "8538e789fca6297b",
+   "http": 200,
+   "name": "GOOD DESIGN NEW HOPE AWARD（日本 G-Mark 新希望奖）",
+   "ndates": 14,
+   "size": 10249,
+   "state": "ok",
+   "url": "https://newhope.g-mark.org",
+   "years": [
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026",
+    "2027"
+   ]
+  },
+  "goda": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:48Z",
+   "finalUrl": "https://www.godaaward.com/",
+   "fp": "7fedfe36239265e3",
+   "http": 200,
+   "name": "金桂工业设计大赛（GODA）",
+   "ndates": 6,
+   "size": 2077,
+   "state": "ok",
+   "url": "https://www.godaaward.com",
+   "years": [
+    "2020",
+    "2026"
+   ]
+  },
+  "goldenpin": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:33:54Z",
+   "finalUrl": "https://goldenpin.org.tw/goldenpin/zh-TW",
+   "fp": "754b912376fc60a5",
+   "http": 200,
+   "name": "金点概念设计奖",
+   "ndates": 3,
+   "size": 2599,
+   "state": "ok",
+   "url": "https://goldenpin.org.tw/golden-pin-concept-design-award",
+   "years": [
+    "2024",
+    "2025",
+    "2026"
+   ]
+  },
+  "haixia": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:44Z",
+   "finalUrl": "http://www.fjcid.com/",
+   "fp": "0c9938196631dd6e",
+   "http": 200,
+   "name": "“中国·海峡”海峡杯工业设计大赛",
+   "ndates": 11,
+   "size": 2539,
+   "state": "ok",
+   "url": "http://www.fjcid.com",
+   "years": [
+    "2000",
+    "2012",
+    "2020",
+    "2024",
+    "2025",
+    "2026",
+    "2028",
+    "2089"
+   ]
+  },
+  "huabi": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:57Z",
+   "finalUrl": "http://www.chinagdf.com.cn/sj/2026_lzb.html",
+   "fp": "9dfaf51efa2351b6",
+   "http": 200,
+   "name": "华笔奖·“励致杯”民用家居设计大赛",
+   "ndates": 5,
+   "size": 2720,
+   "state": "ok",
+   "url": "http://www.chinagdf.com.cn/sj/2026_lzb.html",
+   "years": [
+    "2026",
+    "2027"
+   ]
+  },
+  "huacan": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:23Z",
+   "finalUrl": "https://www.cahe.edu.cn/site/term/906.html",
+   "http": 200,
+   "moved": true,
+   "name": "两岸新锐设计竞赛·华灿奖",
+   "ndates": 0,
+   "size": 578,
+   "state": "blocked",
+   "url": "https://cahe.edu.cn/site/term/906.html",
+   "years": [
+    "2002"
+   ]
+  },
+  "idawards": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:35:16Z",
+   "finalUrl": "https://www.idesignawards.com/",
+   "fp": "f5a5a0578c8ec57d",
+   "http": 200,
+   "name": "International Design Awards（IDA 国际设计奖）",
+   "ndates": 0,
+   "size": 7498,
+   "state": "ok",
+   "url": "https://www.idesignawards.com",
+   "years": [
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+   ]
+  },
+  "idsa": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:33:45Z",
+   "finalUrl": "https://www.idsa.org/awards-recognitions/idea/",
+   "fp": "58b8741f7c3fb40e",
+   "http": 200,
+   "name": "IDEA 国际设计卓越大奖",
+   "ndates": 0,
+   "size": 16013,
+   "state": "ok",
+   "url": "https://www.idsa.org/awards-recognitions/idea/",
+   "years": [
+    "2017",
+    "2026",
+    "2027"
+   ]
+  },
+  "ifdesign": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:28Z",
+   "finalUrl": "https://ifdesign.com/en/",
+   "fp": "09dc76e0f3cb5ec6",
+   "http": 200,
+   "name": "iF DESIGN STUDENT AWARD",
+   "ndates": 0,
+   "size": 5860,
+   "state": "ok",
+   "url": "https://ifdesign.com",
+   "years": [
+    "2017",
+    "2026",
+    "2027"
+   ]
+  },
+  "innodesign": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:35:29Z",
+   "error": "SSLError: HTTPSConnectionPool(host='www.innodesignglobal.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSL",
+   "name": "INNODESIGN PRIZE 全球创新设计大奖",
+   "state": "unreachable",
+   "url": "https://www.innodesignglobal.com"
+  },
+  "kapok": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:09Z",
+   "finalUrl": "https://kapok.gzdesignweek.com/",
+   "http": 200,
+   "name": "红棉设计奖·设计概念奖",
+   "ndates": 0,
+   "size": 7,
+   "state": "blocked",
+   "url": "https://kapok.gzdesignweek.com",
+   "years": []
+  },
+  "kdesign": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:04Z",
+   "finalUrl": "https://kdesignaward.com/",
+   "fp": "4b8c995fadd4ceaf",
+   "http": 200,
+   "name": "K-DESIGN AWARD",
+   "ndates": 0,
+   "size": 4842,
+   "state": "ok",
+   "url": "https://kdesignaward.com",
+   "years": [
+    "2012",
+    "2021"
+   ]
+  },
+  "kokuyo": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:35:25Z",
+   "finalUrl": "https://www.kokuyo.com/en/award/",
+   "fp": "d95ee9d782720072",
+   "http": 200,
+   "name": "国誉设计大奖 KOKUYO DESIGN AWARD",
+   "ndates": 0,
+   "size": 2546,
+   "state": "ok",
+   "url": "https://www.kokuyo.com/en/award/",
+   "years": [
+    "2026",
+    "2027"
+   ]
+  },
+  "lanqiao": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:25Z",
+   "finalUrl": "https://design.lanqiao.cn/",
+   "http": 200,
+   "name": "蓝桥杯·视觉艺术设计赛（工业产品设计）",
+   "ndates": 0,
+   "size": 16,
+   "state": "blocked",
+   "url": "https://design.lanqiao.cn",
+   "years": []
+  },
+  "london": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:35:18Z",
+   "finalUrl": "https://thelondondesignawards.com/",
+   "fp": "390d8fb69daada76",
+   "http": 200,
+   "name": "London Design Awards（伦敦设计奖）",
+   "ndates": 0,
+   "size": 11893,
+   "state": "ok",
+   "url": "https://thelondondesignawards.com",
+   "years": [
+    "2009",
+    "2010",
+    "2025",
+    "2026"
+   ]
+  },
+  "longteng": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:58Z",
+   "finalUrl": "http://dstar.ddfddf.com/",
+   "http": 200,
+   "name": "龙腾之星·全国大学生绿色设计大赛",
+   "ndates": 0,
+   "size": 132,
+   "state": "blocked",
+   "url": "http://dstar.ddfddf.com",
+   "years": [
+    "2025"
+   ]
+  },
+  "mei": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:06Z",
+   "finalUrl": "https://www.meiawards.com/",
+   "http": 200,
+   "name": "制造之美 MEI Awards",
+   "ndates": 4,
+   "size": 1431,
+   "state": "blocked",
+   "url": "https://www.meiawards.com",
+   "years": [
+    "2010",
+    "2011",
+    "2020",
+    "2025",
+    "2026",
+    "2027"
+   ]
+  },
+  "midtown": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:35:26Z",
+   "finalUrl": "https://www.tokyo-midtown.com/jp/award/",
+   "fp": "651acbe629eb9143",
+   "http": 200,
+   "name": "TOKYO MIDTOWN AWARD（东京中城奖·设计竞赛）",
+   "ndates": 114,
+   "size": 9794,
+   "state": "ok",
+   "url": "https://www.tokyo-midtown.com/jp/award/",
+   "years": [
+    "2018",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+   ]
+  },
+  "milan": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:17Z",
+   "finalUrl": "https://www.milan-aap.org.cn/",
+   "http": 200,
+   "name": "米兰设计周·中国高校设计学科师生优秀作品展",
+   "ndates": 0,
+   "size": 24,
+   "state": "blocked",
+   "url": "https://www.milan-aap.org.cn",
+   "years": [
+    "2027"
+   ]
+  },
+  "muse": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:30Z",
+   "finalUrl": "https://www.muse.world/",
+   "fp": "ba842cb3a0da9ebf",
+   "http": 200,
+   "name": "MUSE Design Awards",
+   "ndates": 1,
+   "size": 10596,
+   "state": "ok",
+   "url": "https://www.muse.world",
+   "years": [
+    "2017",
+    "2025",
+    "2026",
+    "2027"
+   ]
+  },
+  "ncda": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:33:51Z",
+   "finalUrl": "https://www.ncda.org.cn/",
+   "fp": "b5e51a22f9ed5b4f",
+   "http": 200,
+   "name": "未来设计师·全国高校数字艺术设计大赛",
+   "ndates": 10,
+   "size": 5504,
+   "state": "ok",
+   "url": "https://www.ncda.org.cn",
+   "years": [
+    "2001",
+    "2012",
+    "2023",
+    "2024",
+    "2025",
+    "2026",
+    "2027"
+   ]
+  },
+  "oda": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:21Z",
+   "finalUrl": "https://oda.org.cn/",
+   "fp": "241b5cd5dbe18e60",
+   "http": 200,
+   "name": "东方设计奖 · 全国高校创新设计大赛",
+   "ndates": 9,
+   "size": 2550,
+   "state": "ok",
+   "url": "https://oda.org.cn",
+   "years": [
+    "2017",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026",
+    "2027"
+   ]
+  },
+  "qingdao": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:45Z",
+   "finalUrl": "http://gxj.qingdao.gov.cn/",
+   "fp": "0b0c7060f307f19e",
+   "http": 200,
+   "name": "青岛“市长杯”工业设计大赛",
+   "ndates": 23,
+   "size": 4028,
+   "state": "ok",
+   "url": "http://gxj.qingdao.gov.cn",
+   "years": [
+    "2025",
+    "2026",
+    "2027",
+    "2028"
+   ]
+  },
+  "reddot": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:35Z",
+   "finalUrl": "https://www.red-dot.org/design-concept",
+   "fp": "7e886c9a51bfa854",
+   "http": 200,
+   "name": "红点设计概念大奖",
+   "ndates": 0,
+   "size": 5532,
+   "state": "ok",
+   "url": "https://www.red-dot.org/design-concept",
+   "years": [
+    "2005",
+    "2026"
+   ]
+  },
+  "saic": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:59Z",
+   "finalUrl": "https://www.saicdesignchallenge.com/",
+   "fp": "c3276043a112c413",
+   "http": 200,
+   "name": "上汽设计国际挑战赛（SDC）",
+   "ndates": 1,
+   "size": 5047,
+   "state": "ok",
+   "url": "https://www.saicdesignchallenge.com",
+   "years": [
+    "2022",
+    "2026"
+   ]
+  },
+  "seoul": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:35:10Z",
+   "finalUrl": "https://www.seouldesignaward.or.kr/",
+   "http": 200,
+   "name": "Seoul Design Award（首尔设计奖）",
+   "ndates": 0,
+   "size": 634,
+   "state": "blocked",
+   "url": "https://www.seouldesignaward.or.kr",
+   "years": [
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+   ]
+  },
+  "spark": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:33:49Z",
+   "finalUrl": "https://www.sparkawards.com/",
+   "http": 202,
+   "name": "Spark Design Awards",
+   "ndates": 0,
+   "size": 1,
+   "state": "blocked",
+   "url": "https://www.sparkawards.com",
+   "years": []
+  },
+  "taipei": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:49Z",
+   "finalUrl": "https://taipeidaward.taipei/",
+   "http": 200,
+   "name": "台北设计奖 Taipei Design Award",
+   "ndates": 5,
+   "size": 1177,
+   "state": "blocked",
+   "url": "https://taipeidaward.taipei",
+   "years": [
+    "2025",
+    "2026"
+   ]
+  },
+  "tisdc": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:51Z",
+   "error": "SSLError: HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /search?q=%E5%8F%B0%E6%B9%BE%E5%9B%",
+   "name": "台湾国际学生创意设计大赛（TISDC）",
+   "state": "unreachable",
+   "url": "https://www.google.com/search?q=台湾国际学生创意设计大赛"
+  },
+  "wenzhou": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:46Z",
+   "finalUrl": "https://wzdb.zjcst.edu.cn/",
+   "fp": "5c1b19e219e38e3f",
+   "http": 200,
+   "name": "温州国际设计双年赛",
+   "ndates": 0,
+   "size": 1885,
+   "state": "ok",
+   "url": "https://wzdb.zjcst.edu.cn",
+   "years": [
+    "2014",
+    "2020",
+    "2025",
+    "2026"
+   ]
+  },
+  "windmill": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:53Z",
+   "finalUrl": "http://wjyt-china.com/events/competition",
+   "fp": "a27366135559b0b1",
+   "http": 200,
+   "name": "风车杯·中国玩具和婴童用品创意设计大赛",
+   "ndates": 2,
+   "size": 2113,
+   "state": "ok",
+   "url": "http://wjyt-china.com/events/competition",
+   "years": [
+    "2000",
+    "2010",
+    "2020",
+    "2025",
+    "2026",
+    "2027"
+   ]
+  },
+  "yongkang": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:54Z",
+   "finalUrl": "https://competition.ykwjdesign.com/",
+   "http": 200,
+   "moved": true,
+   "name": "五金创新设计大奖（原中国五金产品国际工业设计大赛）",
+   "ndates": 0,
+   "size": 119,
+   "state": "blocked",
+   "url": "http://www.ykwjdesign.com",
+   "years": []
+  },
+  "youth": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:33:59Z",
+   "finalUrl": "https://www.ccbkabook.com/",
+   "http": 200,
+   "name": "全国青年设计师大赛",
+   "ndates": 0,
+   "size": 119,
+   "state": "blocked",
+   "url": "https://www.ccbkabook.com",
+   "years": []
+  },
+  "yuanmingyuan": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:56Z",
+   "finalUrl": "http://www.yuanmingyuanpark.cn/",
+   "http": 200,
+   "name": "圆明园文创设计大赛",
+   "ndates": 0,
+   "size": 961,
+   "state": "blocked",
+   "url": "http://www.yuanmingyuanpark.cn",
+   "years": [
+    "2025"
+   ]
+  },
+  "zhongshan": {
+   "baseline": true,
+   "checkedAt": "2026-11-24T08:34:13Z",
+   "finalUrl": "http://zs-design.siid.com.cn/",
+   "http": 200,
+   "name": "中山市工业设计大赛",
+   "ndates": 9,
+   "size": 1361,
+   "state": "blocked",
+   "url": "http://zs-design.siid.com.cn/",
+   "years": [
+    "2026"
+   ]
+  }
+ },
+ "moved": [],
+ "total": 58
+}
