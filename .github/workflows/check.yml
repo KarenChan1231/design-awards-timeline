@@ -1,0 +1,38 @@
+name: check
+
+on:
+  schedule:
+    - cron: '0 1 1 * *'      # 每月 1 号 UTC 01:00 = 北京 09:00
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Probe official sites
+        run: python scripts/check_sites.py
+
+      - name: Commit status.json
+        run: |
+          git config user.name  "awards-bot"
+          git config user.email "awards-bot@users.noreply.github.com"
+          git add status.json
+          if git diff --cached --quiet; then
+            echo "no change"
+          else
+            git commit -m "chore: monthly site check $(date -u +%F)"
+            git push
+          fi
