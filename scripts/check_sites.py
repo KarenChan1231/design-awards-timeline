@@ -14,6 +14,9 @@ UA = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
       '(KHTML, like Gecko) Chrome/124.0 Safari/537.36 AwardsTimelineBot/1.0')
 TIMEOUT = 25
 SLEEP = 1.0
+BLOCK_CODES = {401, 403, 406, 407, 409, 418, 429, 503, 999}   # 反爬/风控，不等于站点失效
+UA2 = ('Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 '
+       '(KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1')
 YEAR_RE = re.compile(r'(20\d{2})')
 
 
@@ -57,14 +60,26 @@ def fingerprint(html):
 def check_one(did, name, url):
     rec = {'name': name, 'url': url, 'checkedAt': datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds').replace('+00:00','Z')}
     try:
-        r = requests.get(url, headers={'User-Agent': UA, 'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8'},
-                         timeout=TIMEOUT, allow_redirects=True)
+        hdr = {
+            'User-Agent': UA,
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+            'Cache-Control': 'no-cache',
+        }
+        r = requests.get(url, headers=hdr, timeout=TIMEOUT, allow_redirects=True)
+        if r.status_code in BLOCK_CODES:          # 换手机 UA 再试一次，仍被拦才算 blocked
+            time.sleep(1.0)
+            r = requests.get(url, headers=dict(hdr, **{'User-Agent': UA2}), timeout=TIMEOUT, allow_redirects=True)
         rec['http'] = r.status_code
         rec['finalUrl'] = r.url
         if urlsplit(r.url).netloc != urlsplit(url).netloc:
             rec['moved'] = True
+        if r.status_code in BLOCK_CODES:
+            rec['state'] = 'blocked'          # 被反爬/风控拦，不代表链接坏了
+            rec['http'] = r.status_code
+            return rec
         if r.status_code >= 400:
-            rec['state'] = 'dead'
+            rec['state'] = 'dead'             # 404/410 等：确实失效
             return rec
         r.encoding = r.apparent_encoding or r.encoding
         fp, years, size, dates = fingerprint(r.text)
