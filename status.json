@@ -1,19 +1,25 @@
 {
- "changed": [],
+ "changed": [
+  "mei",
+  "cmit",
+  "byd",
+  "chery"
+ ],
  "counts": {
-  "baseline": 58,
-  "blocked": 12,
-  "changed": 0,
-  "dead": 0,
-  "ok": 42,
-  "unreachable": 4
+  "baseline": 0,
+  "blocked": 11,
+  "changed": 4,
+  "dead": 1,
+  "ok": 37,
+  "unreachable": 5
  },
- "dead": [],
- "generatedAt": "2026-11-24T09:05:32Z",
+ "dead": [
+  "huacan"
+ ],
+ "generatedAt": "2026-11-24T09:12:46Z",
  "items": {
   "adesign": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:51Z",
+   "checkedAt": "2026-11-24T09:12:30Z",
    "finalUrl": "https://competition.adesignaward.com/",
    "fp": "2eb98bcd04e91240",
    "http": 200,
@@ -25,14 +31,13 @@
    "years": []
   },
   "adp": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:23Z",
+   "checkedAt": "2026-11-24T09:10:26Z",
    "finalUrl": "https://asiadesignprize.com/",
    "fp": "3db68874b8d1bfdb",
    "http": 200,
    "name": "Asia Design Prize 亚洲设计奖",
    "ndates": 0,
-   "size": 12448,
+   "size": 12400,
    "state": "ok",
    "url": "https://asiadesignprize.com",
    "years": [
@@ -45,8 +50,7 @@
    ]
   },
   "adyoung": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:02:36Z",
+   "checkedAt": "2026-11-24T09:09:03Z",
    "finalUrl": "https://www.ad-young.com/",
    "fp": "16b0d0648c8316f3",
    "http": 200,
@@ -62,8 +66,7 @@
    ]
   },
   "avada": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:02:51Z",
+   "checkedAt": "2026-11-24T09:09:18Z",
    "finalUrl": "https://www.asia-design-week.com/",
    "fp": "52561a1d93cd5a55",
    "http": 200,
@@ -79,8 +82,7 @@
    ]
   },
   "bda": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:17Z",
+   "checkedAt": "2026-11-24T09:10:11Z",
    "finalUrl": "https://www.bdaward.com/",
    "fp": "8018c3ccee0ae503",
    "http": 200,
@@ -103,23 +105,19 @@
    ]
   },
   "byd": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:29Z",
-   "finalUrl": "https://www.byd.com/cn",
-   "fp": "8d83929d60a99288",
+   "checkedAt": "2026-11-24T09:11:48Z",
+   "finalUrl": "https://www.byd.com/us",
+   "fp": "61145bd465121b3a",
    "http": 200,
    "name": "比亚迪全球汽车设计大赛",
    "ndates": 0,
-   "size": 3600,
-   "state": "ok",
+   "size": 1759,
+   "state": "changed",
    "url": "https://www.byd.com",
-   "years": [
-    "2027"
-   ]
+   "years": []
   },
   "cdec": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:15Z",
+   "checkedAt": "2026-11-24T09:10:08Z",
    "finalUrl": "https://www.cdec.org.cn/",
    "fp": "63be6b8e023ab91f",
    "http": 200,
@@ -136,25 +134,22 @@
    ]
   },
   "chery": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:31Z",
-   "finalUrl": "https://www.xiaohongshu.com/user/profile/67d85c15000000000d00883e?xsec_token=YBDPhbJ4t8kb6JSXNDDRm3oFXcRzjy5oEMVzbcb3lQ4BU=&xsec_source=app_share&share_id=047bf9ce25574e42ae34a577c81580a8&track_code=3MWZQb15Hng",
-   "fp": "abc713a560578cab",
+   "checkedAt": "2026-11-24T09:12:18Z",
+   "finalUrl": "https://www.rednote.com/user/profile/67d85c15000000000d00883e?xsec_token=YBDPhbJ4t8kb6JSXNDDRm3oFXcRzjy5oEMVzbcb3lQ4BU=&xsec_source=app_share&share_id=047bf9ce25574e42ae34a577c81580a8&track_code=3MWZQb15Hng",
+   "fp": "0b32aa29a532faa0",
    "http": 200,
    "moved": true,
    "name": "奇瑞全球设计大赛（CADA）",
-   "ndates": 1,
-   "size": 1711,
-   "state": "ok",
+   "ndates": 0,
+   "size": 1607,
+   "state": "changed",
    "url": "https://xhslink.cn/o/3IQJ5e3G7YJ",
    "years": [
-    "2014",
     "2026"
    ]
   },
   "cidea": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:40Z",
+   "checkedAt": "2026-11-24T09:12:27Z",
    "finalUrl": "https://cidea-union.com/",
    "fp": "55c7e95aebf2636f",
    "http": 200,
@@ -176,15 +171,14 @@
    ]
   },
   "cmit": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:55Z",
+   "checkedAt": "2026-11-24T09:10:38Z",
    "finalUrl": "https://www.cmit.cn/",
-   "fp": "8d942abc646dc273",
+   "fp": "e5155ab4f64d4449",
    "http": 200,
    "name": "全国大学生数字媒体科技作品及创意设计竞赛（数媒竞赛）",
    "ndates": 3,
-   "size": 2415,
-   "state": "ok",
+   "size": 2368,
+   "state": "changed",
    "url": "https://www.cmit.cn",
    "years": [
     "2023",
@@ -193,8 +187,7 @@
    ]
   },
   "cndesigners": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:12Z",
+   "checkedAt": "2026-11-24T09:10:04Z",
    "finalUrl": "https://www.cndesigners.com/",
    "fp": "1e5de81cd9193b8f",
    "http": 200,
@@ -211,14 +204,13 @@
    ]
   },
   "core77": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:49Z",
+   "checkedAt": "2026-11-24T09:10:37Z",
    "finalUrl": "https://designawards.core77.com/",
    "fp": "0c963216d01bc565",
    "http": 200,
    "name": "Core77 Design Awards",
    "ndates": 0,
-   "size": 8339,
+   "size": 8383,
    "state": "ok",
    "url": "https://designawards.core77.com/",
    "years": [
@@ -241,8 +233,7 @@
    ]
   },
   "cuidc": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:07Z",
+   "checkedAt": "2026-11-24T09:09:29Z",
    "finalUrl": "https://www.cuidc.net/",
    "http": 200,
    "name": "全国大学生工业设计大赛",
@@ -253,8 +244,7 @@
    "years": []
   },
   "d3ds": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:04Z",
+   "checkedAt": "2026-11-24T09:09:25Z",
    "finalUrl": "https://3dds.3ddl.net/",
    "fp": "8687d26f09bd86ab",
    "http": 200,
@@ -273,8 +263,7 @@
    ]
   },
   "dia": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:02:49Z",
+   "checkedAt": "2026-11-24T09:09:15Z",
    "finalUrl": "https://www.di-award.org/zh",
    "fp": "8a5d24c124910152",
    "http": 200,
@@ -290,8 +279,7 @@
    ]
   },
   "did": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:11Z",
+   "checkedAt": "2026-11-24T09:10:01Z",
    "finalUrl": "https://did.gd-id.com/",
    "fp": "67dac8c9caf1cfd4",
    "http": 200,
@@ -305,8 +293,7 @@
    ]
   },
   "dmp": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:05:14Z",
+   "checkedAt": "2026-11-24T09:12:36Z",
    "finalUrl": "https://www.designmasterprize.com/",
    "fp": "f41c8845adedde18",
    "http": 200,
@@ -320,8 +307,7 @@
    ]
   },
   "dnaparis": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:33Z",
+   "checkedAt": "2026-11-24T09:12:26Z",
    "finalUrl": "https://dna.paris/",
    "fp": "3119e73918c2e125",
    "http": 200,
@@ -342,28 +328,14 @@
    ]
   },
   "dongfeng": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:30Z",
-   "finalUrl": "https://www.dfmc.com.cn/news/company/news_20260324_0941.html",
-   "fp": "14f01b7618d631aa",
-   "http": 200,
+   "checkedAt": "2026-11-24T09:11:50Z",
+   "error": "ReadTimeout: HTTPSConnectionPool(host='www.dfmc.com.cn', port=443): Read timed out. (read timeout=25)",
    "name": "“东风梦想车”国际青年汽车创意设计大赛",
-   "ndates": 2,
-   "size": 1788,
-   "state": "ok",
-   "url": "https://www.dfmc.com.cn/news/company/news_20260324_0941.html",
-   "years": [
-    "2000",
-    "2003",
-    "2010",
-    "2018",
-    "2023",
-    "2026"
-   ]
+   "state": "unreachable",
+   "url": "https://www.dfmc.com.cn/news/company/news_20260324_0941.html"
   },
   "dyson": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:02:42Z",
+   "checkedAt": "2026-11-24T09:09:11Z",
    "finalUrl": "https://www.jamesdysonaward.org/",
    "fp": "af400a6c65cf949a",
    "http": 200,
@@ -379,8 +351,7 @@
    ]
   },
   "epda": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:38Z",
+   "checkedAt": "2026-11-24T09:10:34Z",
    "finalUrl": "https://www.productdesignaward.eu/",
    "fp": "655171079f527490",
    "http": 200,
@@ -396,8 +367,7 @@
    ]
   },
   "foshan": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:56Z",
+   "checkedAt": "2026-11-24T09:10:41Z",
    "finalUrl": "https://www.foshanid.cn/",
    "fp": "8f8449f52e9a68f8",
    "http": 200,
@@ -417,8 +387,7 @@
    ]
   },
   "gida": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:08Z",
+   "checkedAt": "2026-11-24T09:09:32Z",
    "finalUrl": "https://www.goldreedaward.com/",
    "fp": "46f28314427dc5c6",
    "http": 200,
@@ -437,8 +406,7 @@
    ]
   },
   "gmark": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:57Z",
+   "checkedAt": "2026-11-24T09:12:32Z",
    "finalUrl": "https://newhope.g-mark.org/",
    "fp": "8538e789fca6297b",
    "http": 200,
@@ -457,8 +425,7 @@
    ]
   },
   "goda": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:02Z",
+   "checkedAt": "2026-11-24T09:11:17Z",
    "finalUrl": "https://www.godaaward.com/",
    "fp": "7fedfe36239265e3",
    "http": 200,
@@ -473,8 +440,7 @@
    ]
   },
   "goldenpin": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:02:37Z",
+   "checkedAt": "2026-11-24T09:09:06Z",
    "finalUrl": "https://goldenpin.org.tw/goldenpin/zh-TW",
    "fp": "754b912376fc60a5",
    "http": 200,
@@ -490,30 +456,14 @@
    ]
   },
   "haixia": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:59Z",
-   "finalUrl": "http://www.fjcid.com/",
-   "fp": "0c9938196631dd6e",
-   "http": 200,
+   "checkedAt": "2026-11-24T09:10:44Z",
+   "error": "ConnectTimeout: HTTPConnectionPool(host='www.fjcid.com', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTP",
    "name": "“中国·海峡”海峡杯工业设计大赛",
-   "ndates": 11,
-   "size": 2539,
-   "state": "ok",
-   "url": "http://www.fjcid.com",
-   "years": [
-    "2000",
-    "2012",
-    "2020",
-    "2024",
-    "2025",
-    "2026",
-    "2028",
-    "2089"
-   ]
+   "state": "unreachable",
+   "url": "http://www.fjcid.com"
   },
   "huabi": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:20Z",
+   "checkedAt": "2026-11-24T09:11:32Z",
    "finalUrl": "http://www.chinagdf.com.cn/sj/2026_lzb.html",
    "fp": "9dfaf51efa2351b6",
    "http": 200,
@@ -528,23 +478,16 @@
    ]
   },
   "huacan": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:20Z",
+   "checkedAt": "2026-11-24T09:10:18Z",
    "finalUrl": "https://www.cahe.edu.cn/site/term/906.html",
-   "http": 200,
+   "http": 502,
    "moved": true,
    "name": "两岸新锐设计竞赛·华灿奖",
-   "ndates": 0,
-   "size": 578,
-   "state": "blocked",
-   "url": "https://cahe.edu.cn/site/term/906.html",
-   "years": [
-    "2002"
-   ]
+   "state": "dead",
+   "url": "https://cahe.edu.cn/site/term/906.html"
   },
   "idawards": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:05:02Z",
+   "checkedAt": "2026-11-24T09:12:34Z",
    "finalUrl": "https://www.idesignawards.com/",
    "fp": "f5a5a0578c8ec57d",
    "http": 200,
@@ -561,8 +504,7 @@
    ]
   },
   "idsa": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:02:25Z",
+   "checkedAt": "2026-11-24T09:08:56Z",
    "finalUrl": "https://www.idsa.org/awards-recognitions/idea/",
    "fp": "58b8741f7c3fb40e",
    "http": 200,
@@ -578,8 +520,7 @@
    ]
   },
   "ifdesign": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:26Z",
+   "checkedAt": "2026-11-24T09:10:29Z",
    "finalUrl": "https://ifdesign.com/en/",
    "fp": "09dc76e0f3cb5ec6",
    "http": 200,
@@ -595,16 +536,14 @@
    ]
   },
   "innodesign": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:05:31Z",
+   "checkedAt": "2026-11-24T09:12:43Z",
    "error": "SSLError: HTTPSConnectionPool(host='www.innodesignglobal.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSL",
    "name": "INNODESIGN PRIZE 全球创新设计大奖",
    "state": "unreachable",
    "url": "https://www.innodesignglobal.com"
   },
   "kapok": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:06Z",
+   "checkedAt": "2026-11-24T09:09:27Z",
    "finalUrl": "https://kapok.gzdesignweek.com/",
    "http": 200,
    "name": "红棉设计奖·设计概念奖",
@@ -615,14 +554,13 @@
    "years": []
   },
   "kdesign": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:02:57Z",
+   "checkedAt": "2026-11-24T09:09:19Z",
    "finalUrl": "https://kdesignaward.com/",
    "fp": "4b8c995fadd4ceaf",
    "http": 200,
    "name": "K-DESIGN AWARD",
    "ndates": 0,
-   "size": 4748,
+   "size": 4689,
    "state": "ok",
    "url": "https://kdesignaward.com",
    "years": [
@@ -631,8 +569,7 @@
    ]
   },
   "kokuyo": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:05:23Z",
+   "checkedAt": "2026-11-24T09:12:40Z",
    "finalUrl": "https://www.kokuyo.com/en/award/",
    "fp": "d95ee9d782720072",
    "http": 200,
@@ -647,8 +584,7 @@
    ]
   },
   "lanqiao": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:21Z",
+   "checkedAt": "2026-11-24T09:10:24Z",
    "finalUrl": "https://design.lanqiao.cn/",
    "http": 200,
    "name": "蓝桥杯·视觉艺术设计赛（工业产品设计）",
@@ -659,8 +595,7 @@
    "years": []
   },
   "london": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:05:09Z",
+   "checkedAt": "2026-11-24T09:12:35Z",
    "finalUrl": "https://thelondondesignawards.com/",
    "fp": "390d8fb69daada76",
    "http": 200,
@@ -677,8 +612,7 @@
    ]
   },
   "longteng": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:21Z",
+   "checkedAt": "2026-11-24T09:11:45Z",
    "finalUrl": "http://dstar.ddfddf.com/",
    "http": 200,
    "name": "龙腾之星·全国大学生绿色设计大赛",
@@ -691,27 +625,23 @@
    ]
   },
   "mei": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:03Z",
-   "finalUrl": "https://www.meiawards.com/",
+   "checkedAt": "2026-11-24T09:09:21Z",
+   "finalUrl": "https://www.meiawards.com/en/index.htm",
+   "fp": "fdb60187ca4da0b1",
    "http": 200,
    "name": "制造之美 MEI Awards",
    "ndates": 4,
-   "size": 1431,
-   "state": "blocked",
+   "size": 2276,
+   "state": "changed",
    "url": "https://www.meiawards.com",
    "years": [
-    "2010",
     "2011",
-    "2020",
     "2025",
-    "2026",
-    "2027"
+    "2026"
    ]
   },
   "midtown": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:05:25Z",
+   "checkedAt": "2026-11-24T09:12:41Z",
    "finalUrl": "https://www.tokyo-midtown.com/jp/award/",
    "fp": "651acbe629eb9143",
    "http": 200,
@@ -730,8 +660,7 @@
    ]
   },
   "milan": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:14Z",
+   "checkedAt": "2026-11-24T09:10:06Z",
    "finalUrl": "https://www.milan-aap.org.cn/",
    "http": 200,
    "name": "米兰设计周·中国高校设计学科师生优秀作品展",
@@ -744,14 +673,13 @@
    ]
   },
   "muse": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:33Z",
+   "checkedAt": "2026-11-24T09:10:32Z",
    "finalUrl": "https://www.muse.world/",
    "fp": "ba842cb3a0da9ebf",
    "http": 200,
    "name": "MUSE Design Awards",
    "ndates": 1,
-   "size": 10583,
+   "size": 10582,
    "state": "ok",
    "url": "https://www.muse.world",
    "years": [
@@ -762,8 +690,7 @@
    ]
   },
   "ncda": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:02:35Z",
+   "checkedAt": "2026-11-24T09:09:00Z",
    "finalUrl": "https://www.ncda.org.cn/",
    "fp": "b5e51a22f9ed5b4f",
    "http": 200,
@@ -783,8 +710,7 @@
    ]
   },
   "oda": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:18Z",
+   "checkedAt": "2026-11-24T09:10:16Z",
    "finalUrl": "https://oda.org.cn/",
    "fp": "241b5cd5dbe18e60",
    "http": 200,
@@ -804,8 +730,7 @@
    ]
   },
   "qingdao": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:00Z",
+   "checkedAt": "2026-11-24T09:11:10Z",
    "finalUrl": "http://gxj.qingdao.gov.cn/",
    "fp": "0b0c7060f307f19e",
    "http": 200,
@@ -822,8 +747,7 @@
    ]
   },
   "reddot": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:44Z",
+   "checkedAt": "2026-11-24T09:10:35Z",
    "finalUrl": "https://www.red-dot.org/design-concept",
    "fp": "7e886c9a51bfa854",
    "http": 200,
@@ -838,8 +762,7 @@
    ]
   },
   "saic": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:23Z",
+   "checkedAt": "2026-11-24T09:11:46Z",
    "finalUrl": "https://www.saicdesignchallenge.com/",
    "fp": "c3276043a112c413",
    "http": 200,
@@ -854,44 +777,60 @@
    ]
   },
   "seoul": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:45Z",
-   "error": "SSLError: HTTPSConnectionPool(host='www.seouldesignaward.or.kr', port=443): Max retries exceeded with url: / (Caused by SSLError(S",
+   "checkedAt": "2026-11-24T09:12:29Z",
+   "finalUrl": "https://www.seouldesignaward.or.kr/",
+   "http": 200,
    "name": "Seoul Design Award（首尔设计奖）",
-   "state": "unreachable",
-   "url": "https://www.seouldesignaward.or.kr"
+   "ndates": 0,
+   "size": 634,
+   "state": "blocked",
+   "url": "https://www.seouldesignaward.or.kr",
+   "years": [
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+   ]
   },
   "spark": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:02:30Z",
-   "finalUrl": "https://www.sparkawards.com/",
-   "http": 202,
+   "checkedAt": "2026-11-24T09:08:58Z",
+   "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
    "name": "Spark Design Awards",
-   "ndates": 0,
-   "size": 1,
-   "state": "blocked",
-   "url": "https://www.sparkawards.com",
-   "years": []
+   "state": "unreachable",
+   "url": "https://www.sparkawards.com"
   },
   "taipei": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:04Z",
-   "error": "SSLError: HTTPSConnectionPool(host='taipeidaward.taipei', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFEr",
+   "checkedAt": "2026-11-24T09:11:19Z",
+   "finalUrl": "https://taipeidaward.taipei/",
+   "http": 200,
    "name": "台北设计奖 Taipei Design Award",
-   "state": "unreachable",
-   "url": "https://taipeidaward.taipei"
+   "ndates": 5,
+   "size": 1177,
+   "state": "blocked",
+   "url": "https://taipeidaward.taipei",
+   "years": [
+    "2025",
+    "2026"
+   ]
   },
   "tisdc": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:10Z",
-   "error": "SSLError: HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /search?q=%E5%8F%B0%E6%B9%BE%E5%9B%",
+   "checkedAt": "2026-11-24T09:11:21Z",
+   "finalUrl": "https://www.google.com/search?q=%E5%8F%B0%E6%B9%BE%E5%9B%BD%E9%99%85%E5%AD%A6%E7%94%9F%E5%88%9B%E6%84%8F%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B",
+   "http": 200,
    "name": "台湾国际学生创意设计大赛（TISDC）",
-   "state": "unreachable",
-   "url": "https://www.google.com/search?q=台湾国际学生创意设计大赛"
+   "ndates": 0,
+   "size": 74,
+   "state": "blocked",
+   "url": "https://www.google.com/search?q=台湾国际学生创意设计大赛",
+   "years": []
   },
   "wenzhou": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:01Z",
+   "checkedAt": "2026-11-24T09:11:13Z",
    "finalUrl": "https://wzdb.zjcst.edu.cn/",
    "fp": "5c1b19e219e38e3f",
    "http": 200,
@@ -908,8 +847,7 @@
    ]
   },
   "windmill": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:16Z",
+   "checkedAt": "2026-11-24T09:11:22Z",
    "finalUrl": "http://wjyt-china.com/events/competition",
    "fp": "a27366135559b0b1",
    "http": 200,
@@ -928,8 +866,7 @@
    ]
   },
   "yongkang": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:17Z",
+   "checkedAt": "2026-11-24T09:11:25Z",
    "finalUrl": "https://competition.ykwjdesign.com/",
    "http": 200,
    "moved": true,
@@ -941,8 +878,7 @@
    "years": []
   },
   "youth": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:02:47Z",
+   "checkedAt": "2026-11-24T09:09:13Z",
    "finalUrl": "https://www.ccbkabook.com/",
    "http": 200,
    "name": "全国青年设计师大赛",
@@ -953,8 +889,7 @@
    "years": []
   },
   "yuanmingyuan": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:04:19Z",
+   "checkedAt": "2026-11-24T09:11:28Z",
    "finalUrl": "https://www.yuanmingyuanpark.cn/",
    "http": 200,
    "name": "圆明园文创设计大赛",
@@ -967,18 +902,11 @@
    ]
   },
   "zhongshan": {
-   "baseline": true,
-   "checkedAt": "2026-11-24T09:03:10Z",
-   "finalUrl": "http://zs-design.siid.com.cn/",
-   "http": 200,
+   "checkedAt": "2026-11-24T09:09:34Z",
+   "error": "ConnectTimeout: HTTPConnectionPool(host='zs-design.siid.com.cn', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutErr",
    "name": "中山市工业设计大赛",
-   "ndates": 9,
-   "size": 1361,
-   "state": "blocked",
-   "url": "http://zs-design.siid.com.cn/",
-   "years": [
-    "2026"
-   ]
+   "state": "unreachable",
+   "url": "http://zs-design.siid.com.cn/"
   }
  },
  "moved": [],
